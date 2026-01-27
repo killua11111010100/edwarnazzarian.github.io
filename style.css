@@ -411,4 +411,54 @@ nav a{
     font-size: 14px;
   }
 }
+/* ===== HARD MOBILE FIX (override) ===== */
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+}
+
+header, main, nav, footer {
+  max-width: 100%;
+}
+
+/* Force hero + content to fit screen */
+.hero, .page {
+  width: 100% !important;
+  max-width: 1100px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  box-sizing: border-box !important;
+}
+
+/* Make hero stack nicely on small screens */
+@media (max-width: 600px) {
+  .hero {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+    padding: 16px !important;
+  }
+
+  .hero-actions {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+
+  .btn {
+    width: 100% !important;
+  }
+
+  nav {
+    width: calc(100% - 20px) !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+  }
+}
 
