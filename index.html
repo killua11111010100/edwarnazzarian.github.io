@@ -1,39 +1,83 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>Edwar Nazzarian | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Edwar Nazzarian | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-    <h1>Edwar Nazzarian</h1>
-    <p>Étudiant en génie logiciel – ÉTS, Montréal</p>
+  <div class="hero reveal">
+    <img class="avatar" src="profile.jpg" alt="Photo de profil d’Edwar Nazzarian">
+    <div class="hero-text">
+      <h1>Edwar Nazzarian</h1>
+      <p>Étudiant en génie logiciel – ÉTS, Montréal</p>
+
+      <div class="hero-actions">
+        <a class="btn primary" href="projects.html">Voir mes projets</a>
+        <a class="btn" href="contact.html">Me contacter</a>
+      </div>
+    </div>
+  </div>
 </header>
 
 <nav>
-    <a href="index.html">Accueil</a>
-    <a href="projects.html">Projets</a>
-    <a href="skills.html">Compétences</a>
-    <a href="education.html">Parcours</a>
-    <a href="contact.html">Contact</a>
+  <a href="index.html">Accueil</a>
+  <a href="projects.html">Projets</a>
+  <a href="skills.html">Compétences</a>
+  <a href="education.html">Parcours</a>
+  <a href="contact.html">Contact</a>
 </nav>
 
 <main class="page">
+  <h2 class="reveal">Bienvenue</h2>
 
-    <h2>Bienvenue</h2>
+  <section class="reveal">
+    <h3>À propos</h3>
     <p>
-        Je suis étudiant en génie logiciel à l’École de technologie supérieure (ÉTS).
-        Ce portfolio présente mes projets, mes compétences et mon parcours académique.
+      Je suis étudiant en génie logiciel à l’ÉTS. Ce portfolio présente mes projets,
+      mes compétences et mon parcours académique.
     </p>
+  </section>
+
+  <section class="reveal">
+    <h3>Ce que tu trouveras ici</h3>
+    <div class="grid">
+      <div class="card">
+        <h4>Projets</h4>
+        <p>Applications web / Java / Android avec détails techniques et rôle.</p>
+        <a class="link" href="projects.html">Accéder →</a>
+      </div>
+
+      <div class="card">
+        <h4>Compétences</h4>
+        <p>Langages, outils, méthodologies (POO, MVC, tests, débogage…).</p>
+        <a class="link" href="skills.html">Accéder →</a>
+      </div>
+
+      <div class="card">
+        <h4>Parcours</h4>
+        <p>Cheminement universitaire + baccalauréat, cours clés, progression.</p>
+        <a class="link" href="education.html">Accéder →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="reveal">
+    <h3>Objectif</h3>
+    <p>
+      Je suis ouvert aux opportunités de stage et à des projets étudiants.
+      J’aime construire des solutions claires, maintenables et bien structurées.
+    </p>
+  </section>
 </main>
 
 <footer>
-    <p>© 2026 – Edwar Nazzarian</p>
+  <p>© 2026 – Edwar Nazzarian</p>
 </footer>
 
-    <script src="script.js"></script>
-
+<script src="script.js"></script>
 </body>
 </html>
