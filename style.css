@@ -1,0 +1,95 @@
+/* Base */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background: #222;
+  color: #fff;
+  padding: 36px 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 32px;
+}
+
+header p {
+  margin: 8px 0 0;
+  opacity: 0.9;
+}
+
+/* Nav */
+nav {
+  background: #444;
+  padding: 12px 10px;
+  text-align: center;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 12px;
+  display: inline-block;
+  padding: 6px 8px;
+  border-radius: 6px;
+}
+
+nav a:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* Main */
+main {
+  max-width: 900px;
+  margin: 24px auto;
+  background: #fff;
+  padding: 28px 22px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+  margin-top: 0;
+}
+
+/* Sections / cards */
+section {
+  padding: 16px 0;
+  border-top: 1px solid #eee;
+}
+
+section:first-of-type {
+  border-top: none;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 18px 10px;
+  color: #fff;
+  background: #222;
+  margin-top: 28px;
+}
+
+/* Links */
+a {
+  color: #0b57d0;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Lists */
+ul {
+  padding-left: 20px;
+}
