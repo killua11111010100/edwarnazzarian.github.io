@@ -317,3 +317,98 @@ footer{
   .avatar{ width: 96px; height: 96px; }
 }
 
+/* ===== Mobile fixes (iPhone / small screens) ===== */
+* { box-sizing: border-box; }
+img { max-width: 100%; height: auto; }
+
+.page{
+  width: min(1100px, 100%);
+  margin: 0 auto;
+  padding: 18px 14px;
+}
+
+/* Navbar: allow wrapping + nicer touch targets */
+nav{
+  position: sticky;
+  top: 10px;
+  z-index: 20;
+  margin: 12px auto 0;
+  width: min(1100px, calc(100% - 28px));
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+nav a{
+  padding: 10px 14px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+/* Hero: stack nicely on mobile */
+.hero{
+  width: min(1100px, calc(100% - 28px));
+  margin: 18px auto 0;
+  padding: 18px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 14px;
+}
+
+/* Make text wrap better */
+.hero-text h1{
+  font-size: clamp(28px, 7vw, 44px);
+  line-height: 1.1;
+  margin: 0;
+}
+
+.hero-text p{
+  font-size: clamp(14px, 3.8vw, 18px);
+  opacity: .9;
+}
+
+/* Buttons: better on phone */
+.hero-actions{
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.btn{
+  flex: 1 1 160px; /* each button grows */
+  text-align: center;
+}
+
+/* Cards grid: 1 column on small screens */
+@media (max-width: 860px){
+  .grid{
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Extra small phones: hero becomes column */
+@media (max-width: 520px){
+  .hero{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .avatar{
+    width: 76px;
+    height: 76px;
+  }
+
+  nav{
+    gap: 6px;
+  }
+
+  nav a{
+    padding: 9px 12px;
+    font-size: 14px;
+  }
+}
+
