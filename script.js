@@ -54,3 +54,29 @@ document.addEventListener("DOMContentLoaded", () => {
   pageFadeIn();
   pageFadeOutLinks();
 });
+
+(function () {
+  const STORAGE_KEY = "site_lang";
+  const btn = document.getElementById("langToggle");
+
+  function applyLang(lang) {
+    document.querySelectorAll("[data-lang]").forEach(el => {
+      el.style.display = (el.getAttribute("data-lang") === lang) ? "" : "none";
+    });
+
+    if (btn) btn.textContent = (lang === "fr") ? "EN" : "FR";
+    localStorage.setItem(STORAGE_KEY, lang);
+    document.documentElement.setAttribute("lang", lang);
+  }
+
+  const saved = localStorage.getItem(STORAGE_KEY);
+  applyLang(saved || "fr");
+
+  if (btn) {
+    btn.addEventListener("click", () => {
+      const current = localStorage.getItem(STORAGE_KEY) || "fr";
+      applyLang(current === "fr" ? "en" : "fr");
+    });
+  }
+})();
+
