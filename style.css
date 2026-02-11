@@ -542,4 +542,17 @@ html, body { overflow-x: hidden; }
   }
 }
 
+.lang-btn{
+  margin-left: 10px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,0.2);
+  background: transparent;
+  cursor: pointer;
+  font-weight: 600;
+}
+.lang-btn:hover{
+  transform: translateY(-1px);
+}
+
 
