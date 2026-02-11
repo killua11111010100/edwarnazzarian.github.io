@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <title>Projets | Edwar Nazzarian</title>
   <link rel="stylesheet" href="style.css?v=2">
 </head>
@@ -11,59 +10,161 @@
 
 <header>
   <h1>Edwar Nazzarian</h1>
-  <p>Étudiant en génie logiciel – ÉTS, Montréal</p>
+  <p>
+    <span data-lang="fr">Étudiant en génie logiciel – ÉTS, Montréal</span>
+    <span data-lang="en" style="display:none;">Software Engineering Student – ÉTS, Montreal</span>
+  </p>
 </header>
 
 <nav>
-  <a href="index.html">Accueil</a>
-  <a href="projects.html">Projets</a>
-  <a href="skills.html">Compétences</a>
-  <a href="education.html">Parcours</a>
-  <a href="contact.html">Contact</a>
+  <a href="index.html">
+    <span data-lang="fr">Accueil</span>
+    <span data-lang="en" style="display:none;">Home</span>
+  </a>
+
+  <a href="projects.html">
+    <span data-lang="fr">Projets</span>
+    <span data-lang="en" style="display:none;">Projects</span>
+  </a>
+
+  <a href="skills.html">
+    <span data-lang="fr">Compétences</span>
+    <span data-lang="en" style="display:none;">Skills</span>
+  </a>
+
+  <a href="education.html">
+    <span data-lang="fr">Parcours</span>
+    <span data-lang="en" style="display:none;">Education</span>
+  </a>
+
+  <a href="contact.html">
+    <span data-lang="fr">Contact</span>
+    <span data-lang="en" style="display:none;">Contact</span>
+  </a>
+
+  <!-- ✅ Bouton langue -->
+  <button id="langToggle" type="button" class="lang-btn">EN</button>
 </nav>
 
 <main class="page">
 
-  <h2>Projets</h2>
+  <h2>
+    <span data-lang="fr">Projets</span>
+    <span data-lang="en" style="display:none;">Projects</span>
+  </h2>
 
+  <!-- ✅ Projet 1 -->
   <section class="reveal">
+    <h3>
+      <span data-lang="fr">Bozo — Site web d’administration (Projet intégrateur)</span>
+      <span data-lang="en" style="display:none;">Bozo — Admin Web Dashboard (Capstone Project)</span>
+    </h3>
 
-    <h3>Bozo — Site web d’administration (Projet intégrateur)</h3>
-    <p><strong>Description :</strong> Développement d’un site web d’administration pour une application de livraison d’alcool.
-      Gestion des produits, des magasins et du stock via une base de données.</p>
+    <p>
+      <strong>
+        <span data-lang="fr">Description :</span>
+        <span data-lang="en" style="display:none;">Description:</span>
+      </strong>
+      <span data-lang="fr">
+        Développement d’un site web d’administration pour une application de livraison d’alcool.
+        Gestion des produits, des magasins et du stock via une base de données.
+      </span>
+      <span data-lang="en" style="display:none;">
+        Built an administrative web dashboard for an alcohol delivery app.
+        Managed products, stores, and inventory using a database.
+      </span>
+    </p>
 
-    <p><strong>Technologies :</strong> HTML, CSS, JavaScript, PHP, MySQL</p>
+    <p>
+      <strong>
+        <span data-lang="fr">Technologies :</span>
+        <span data-lang="en" style="display:none;">Tech Stack:</span>
+      </strong>
+      HTML, CSS, JavaScript, PHP, MySQL
+    </p>
 
-    <p><strong>Contributions principales :</strong></p>
+    <p><strong>
+      <span data-lang="fr">Contributions principales :</span>
+      <span data-lang="en" style="display:none;">Main Contributions:</span>
+    </strong></p>
+
     <ul>
-      <li>Création d’interfaces admin (CRUD) : ajout/modification/suppression</li>
-      <li>Connexion au backend et gestion des requêtes</li>
-      <li>Organisation du code et amélioration de la maintenabilité</li>
+      <li>
+        <span data-lang="fr">Création d’interfaces admin (CRUD) : ajout/modification/suppression</span>
+        <span data-lang="en" style="display:none;">Built admin CRUD interfaces: create/update/delete</span>
+      </li>
+      <li>
+        <span data-lang="fr">Connexion au backend et gestion des requêtes</span>
+        <span data-lang="en" style="display:none;">Connected the UI to the backend and handled requests</span>
+      </li>
+      <li>
+        <span data-lang="fr">Organisation du code et amélioration de la maintenabilité</span>
+        <span data-lang="en" style="display:none;">Improved code structure and maintainability</span>
+      </li>
     </ul>
-
-    
-
-  <section class="reveal">
-
-    <h3>Application bancaire — Java (Swing / MVC / Observer)</h3>
-    <p><strong>Description :</strong> Application bancaire avec interface graphique, affichage des informations de compte
-      et historique des transactions, en utilisant une architecture MVC.</p>
-
-    <p><strong>Technologies :</strong> Java, Swing, MVC, Observer</p>
-
-    <p><strong>Contributions principales :</strong></p>
-    <ul>
-      <li>Conception des vues (JFrame, panneaux, tableaux)</li>
-      <li>Structure MVC et séparation logique / interface</li>
-      <li>Affichage dynamique des données (transactions, solde, informations utilisateur)</li>
-    </ul>
-
-    
   </section>
 
+  <!-- ✅ Projet 2 -->
+  <section class="reveal">
+    <h3>
+      <span data-lang="fr">Application bancaire — Java (Swing / MVC / Observer)</span>
+      <span data-lang="en" style="display:none;">Banking App — Java (Swing / MVC / Observer)</span>
+    </h3>
+
+    <p>
+      <strong>
+        <span data-lang="fr">Description :</span>
+        <span data-lang="en" style="display:none;">Description:</span>
+      </strong>
+      <span data-lang="fr">
+        Application bancaire avec interface graphique, affichage des informations de compte
+        et historique des transactions, en utilisant une architecture MVC.
+      </span>
+      <span data-lang="en" style="display:none;">
+        Banking application with a graphical interface, account information display,
+        and transaction history using an MVC architecture.
+      </span>
+    </p>
+
+    <p>
+      <strong>
+        <span data-lang="fr">Technologies :</span>
+        <span data-lang="en" style="display:none;">Tech Stack:</span>
+      </strong>
+      Java, Swing, MVC, Observer
+    </p>
+
+    <p><strong>
+      <span data-lang="fr">Contributions principales :</span>
+      <span data-lang="en" style="display:none;">Main Contributions:</span>
+    </strong></p>
+
+    <ul>
+      <li>
+        <span data-lang="fr">Conception des vues (JFrame, panneaux, tableaux)</span>
+        <span data-lang="en" style="display:none;">Designed UI views (JFrame, panels, tables)</span>
+      </li>
+      <li>
+        <span data-lang="fr">Structure MVC et séparation logique / interface</span>
+        <span data-lang="en" style="display:none;">Implemented MVC structure and separation of concerns</span>
+      </li>
+      <li>
+        <span data-lang="fr">Affichage dynamique des données (transactions, solde, informations utilisateur)</span>
+        <span data-lang="en" style="display:none;">Dynamic data display (transactions, balance, user info)</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ✅ À venir -->
   <section>
-    <h3>À venir</h3>
-    <p>Je continue d’ajouter des projets (web, Java, C) au fil de mon parcours.</p>
+    <h3>
+      <span data-lang="fr">À venir</span>
+      <span data-lang="en" style="display:none;">Coming Next</span>
+    </h3>
+    <p>
+      <span data-lang="fr">Je continue d’ajouter des projets (web, Java, C) au fil de mon parcours.</span>
+      <span data-lang="en" style="display:none;">I’m continuously adding new projects (web, Java, C) as I progress.</span>
+    </p>
   </section>
 
 </main>
@@ -72,7 +173,6 @@
   <p>© 2026 – Edwar Nazzarian</p>
 </footer>
 
-  <script src="script.js"></script>
-
+<script src="script.js"></script>
 </body>
 </html>
