@@ -13,63 +13,156 @@
     <img class="avatar" src="profile.jpeg" alt="Photo de profil d’Edwar Nazzarian">
     <div class="hero-text">
       <h1>Edwar Nazzarian</h1>
-      <p>Étudiant en génie logiciel – ÉTS, Montréal</p>
+
+      <p>
+        <span data-lang="fr">Étudiant en génie logiciel – ÉTS, Montréal</span>
+        <span data-lang="en" style="display:none;">Software Engineering Student – ÉTS, Montreal</span>
+      </p>
 
       <div class="hero-actions">
-        <a class="btn primary" href="projects.html">Voir mes projets</a>
-        <a class="btn" href="contact.html">Me contacter</a>
+        <a class="btn primary" href="projects.html">
+          <span data-lang="fr">Voir mes projets</span>
+          <span data-lang="en" style="display:none;">View my projects</span>
+        </a>
+
+        <a class="btn" href="contact.html">
+          <span data-lang="fr">Me contacter</span>
+          <span data-lang="en" style="display:none;">Contact me</span>
+        </a>
       </div>
     </div>
   </div>
 </header>
 
 <nav>
-  <a href="index.html">Accueil</a>
-  <a href="projects.html">Projets</a>
-  <a href="skills.html">Compétences</a>
-  <a href="education.html">Parcours</a>
-  <a href="contact.html">Contact</a>
+  <a href="index.html">
+    <span data-lang="fr">Accueil</span>
+    <span data-lang="en" style="display:none;">Home</span>
+  </a>
+
+  <a href="projects.html">
+    <span data-lang="fr">Projets</span>
+    <span data-lang="en" style="display:none;">Projects</span>
+  </a>
+
+  <a href="skills.html">
+    <span data-lang="fr">Compétences</span>
+    <span data-lang="en" style="display:none;">Skills</span>
+  </a>
+
+  <a href="education.html">
+    <span data-lang="fr">Parcours</span>
+    <span data-lang="en" style="display:none;">Education</span>
+  </a>
+
+  <a href="contact.html">
+    <span data-lang="fr">Contact</span>
+    <span data-lang="en" style="display:none;">Contact</span>
+  </a>
+
+  <!-- ✅ Bouton langue -->
+  <button id="langToggle" type="button" class="lang-btn">EN</button>
 </nav>
 
 <main class="page">
-  <h2 class="reveal">Bienvenue</h2>
+  <h2 class="reveal">
+    <span data-lang="fr">Bienvenue</span>
+    <span data-lang="en" style="display:none;">Welcome</span>
+  </h2>
 
   <section class="reveal">
-    <h3>À propos</h3>
+    <h3>
+      <span data-lang="fr">À propos</span>
+      <span data-lang="en" style="display:none;">About</span>
+    </h3>
+
     <p>
-      Je suis étudiant en génie logiciel à l’ÉTS. Ce portfolio présente mes projets,
-      mes compétences et mon parcours académique.
+      <span data-lang="fr">
+        Je suis étudiant en génie logiciel à l’ÉTS. Ce portfolio présente mes projets,
+        mes compétences et mon parcours académique.
+      </span>
+      <span data-lang="en" style="display:none;">
+        I’m a Software Engineering student at ÉTS. This portfolio presents my projects,
+        skills, and academic background.
+      </span>
     </p>
   </section>
 
   <section class="reveal">
-    <h3>Ce que tu trouveras ici</h3>
+    <h3>
+      <span data-lang="fr">Ce que tu trouveras ici</span>
+      <span data-lang="en" style="display:none;">What you’ll find here</span>
+    </h3>
+
     <div class="grid">
       <div class="card">
-        <h4>Projets</h4>
-        <p>Applications web / Java / Android avec détails techniques et rôle.</p>
-        <a class="link" href="projects.html">Accéder →</a>
+        <h4>
+          <span data-lang="fr">Projets</span>
+          <span data-lang="en" style="display:none;">Projects</span>
+        </h4>
+
+        <p>
+          <span data-lang="fr">Applications web / Java / Android avec détails techniques et rôle.</span>
+          <span data-lang="en" style="display:none;">Web / Java / Android apps with technical details and my role.</span>
+        </p>
+
+        <a class="link" href="projects.html">
+          <span data-lang="fr">Accéder →</span>
+          <span data-lang="en" style="display:none;">Go →</span>
+        </a>
       </div>
 
       <div class="card">
-        <h4>Compétences</h4>
-        <p>Langages, outils, méthodologies (POO, MVC, tests, débogage…).</p>
-        <a class="link" href="skills.html">Accéder →</a>
+        <h4>
+          <span data-lang="fr">Compétences</span>
+          <span data-lang="en" style="display:none;">Skills</span>
+        </h4>
+
+        <p>
+          <span data-lang="fr">Langages, outils, méthodologies (POO, MVC, tests, débogage…).</span>
+          <span data-lang="en" style="display:none;">Languages, tools, methods (OOP, MVC, testing, debugging…).</span>
+        </p>
+
+        <a class="link" href="skills.html">
+          <span data-lang="fr">Accéder →</span>
+          <span data-lang="en" style="display:none;">Go →</span>
+        </a>
       </div>
 
       <div class="card">
-        <h4>Parcours</h4>
-        <p>Cheminement universitaire + baccalauréat, cours clés, progression.</p>
-        <a class="link" href="education.html">Accéder →</a>
+        <h4>
+          <span data-lang="fr">Parcours</span>
+          <span data-lang="en" style="display:none;">Education</span>
+        </h4>
+
+        <p>
+          <span data-lang="fr">Cheminement universitaire + baccalauréat, cours clés, progression.</span>
+          <span data-lang="en" style="display:none;">Academic pathway + degree, key courses, progression.</span>
+        </p>
+
+        <a class="link" href="education.html">
+          <span data-lang="fr">Accéder →</span>
+          <span data-lang="en" style="display:none;">Go →</span>
+        </a>
       </div>
     </div>
   </section>
 
   <section class="reveal">
-    <h3>Objectif</h3>
+    <h3>
+      <span data-lang="fr">Objectif</span>
+      <span data-lang="en" style="display:none;">Goal</span>
+    </h3>
+
     <p>
-      Je suis ouvert aux opportunités de stage et à des projets étudiants.
-      J’aime construire des solutions claires, maintenables et bien structurées.
+      <span data-lang="fr">
+        Je suis ouvert aux opportunités de stage et à des projets étudiants.
+        J’aime construire des solutions claires, maintenables et bien structurées.
+      </span>
+      <span data-lang="en" style="display:none;">
+        I’m open to internship opportunities and student projects.
+        I enjoy building clear, maintainable, and well-structured solutions.
+      </span>
     </p>
   </section>
 </main>
