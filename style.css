@@ -542,49 +542,27 @@ html, body { overflow-x: hidden; }
   }
 }
 
-/* ===== Language Toggle Button (PRO STYLE) ===== */
-
+/* ===== Language button: visible on dark nav ===== */
 .lang-btn{
-  position: relative;
-  padding: 9px 16px;
+  margin-left: 8px;
+  padding: 10px 14px;
   border-radius: 999px;
-  border: 1px solid rgba(255,255,255,.15);
+  border: 1px solid rgba(255,255,255,.18);
   background: rgba(255,255,255,.06);
   color: rgba(255,255,255,.92);
   font-weight: 800;
   font-size: 14px;
   cursor: pointer;
-  transition: 
-    transform .18s ease,
-    background .18s ease,
-    border-color .18s ease,
-    box-shadow .18s ease;
+  transition: transform .18s ease, background .18s ease, border-color .18s ease;
   white-space: nowrap;
 }
 
-/* Hover effect */
 .lang-btn:hover{
-  background: linear-gradient(
-    135deg,
-    rgba(124,58,237,.35),
-    rgba(6,182,212,.25)
-  );
+  background: rgba(255,255,255,.10);
   border-color: rgba(255,255,255,.25);
   transform: translateY(-1px);
-  box-shadow: 0 6px 18px rgba(0,0,0,.35);
 }
 
-/* Click effect */
 .lang-btn:active{
-  transform: scale(.97);
+  transform: translateY(0) scale(.98);
 }
-
-/* Better mobile spacing */
-@media (max-width: 640px){
-  .lang-btn{
-    padding: 8px 14px;
-    font-size: 13px;
-  }
-}
-
-
