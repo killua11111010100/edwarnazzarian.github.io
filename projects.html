@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Projets | Edwar Nazzarian</title>
-  <link rel="stylesheet" href="style.css?v=2">
+  <link rel="stylesheet" href="style.css?v=3">
 </head>
 <body>
 
@@ -22,7 +22,7 @@
     <span data-lang="en" style="display:none;">Home</span>
   </a>
 
-  <a href="projects.html">
+  <a href="projects.html" aria-current="page">
     <span data-lang="fr">Projets</span>
     <span data-lang="en" style="display:none;">Projects</span>
   </a>
@@ -42,36 +42,120 @@
     <span data-lang="en" style="display:none;">Contact</span>
   </a>
 
-  <!-- ✅ Bouton langue -->
   <button id="langToggle" type="button" class="lang-btn">EN</button>
 </nav>
 
 <main class="page">
 
-  <h2>
-    <span data-lang="fr">Projets</span>
-    <span data-lang="en" style="display:none;">Projects</span>
-  </h2>
+  <section class="page-intro reveal">
+    <h2>
+      <span data-lang="fr">Projets</span>
+      <span data-lang="en" style="display:none;">Projects</span>
+    </h2>
 
-  <!-- ✅ Projet 1 -->
-  <section class="reveal">
-    <h3>
-      <span data-lang="fr">Bozo — Site web d’administration (Projet intégrateur)</span>
-      <span data-lang="en" style="display:none;">Bozo — Admin Web Dashboard (Capstone Project)</span>
-    </h3>
+    <p>
+      <span data-lang="fr">
+        Voici une sélection de projets académiques et personnels qui illustrent mes compétences
+        en développement web, backend, architecture logicielle et conception d’interfaces.
+      </span>
+      <span data-lang="en" style="display:none;">
+        Here is a selection of academic and personal projects that showcase my skills
+        in web development, backend engineering, software architecture, and interface design.
+      </span>
+    </p>
+  </section>
+
+  <!-- Projet 1 -->
+  <section class="project-card reveal">
+    <div class="project-header">
+      <h3>
+        <span data-lang="fr">Secure API Platform — Backend sécurisé et conteneurisé</span>
+        <span data-lang="en" style="display:none;">Secure API Platform — Secure Containerized Backend</span>
+      </h3>
+
+      <span class="project-badge">
+        <span data-lang="fr">Projet personnel</span>
+        <span data-lang="en" style="display:none;">Personal Project</span>
+      </span>
+    </div>
+
+    <p class="project-summary">
+      <span data-lang="fr">
+        Développement d’une API REST sécurisée avec authentification, contrôle d’accès,
+        protection des requêtes et déploiement conteneurisé.
+      </span>
+      <span data-lang="en" style="display:none;">
+        Built a secure REST API with authentication, access control,
+        request protection, and containerized deployment.
+      </span>
+    </p>
 
     <p>
       <strong>
-        <span data-lang="fr">Description :</span>
-        <span data-lang="en" style="display:none;">Description:</span>
+        <span data-lang="fr">Technologies :</span>
+        <span data-lang="en" style="display:none;">Tech Stack:</span>
       </strong>
+      Node.js, Express, PostgreSQL, Docker, JWT, GitHub Actions, NGINX
+    </p>
+
+    <p><strong>
+      <span data-lang="fr">Réalisations clés :</span>
+      <span data-lang="en" style="display:none;">Key Contributions:</span>
+    </strong></p>
+
+    <ul>
+      <li>
+        <span data-lang="fr">Conception d’une API REST structurée avec gestion des routes, validation et sécurité</span>
+        <span data-lang="en" style="display:none;">Designed a structured REST API with routing, validation, and security mechanisms</span>
+      </li>
+      <li>
+        <span data-lang="fr">Implémentation d’une authentification JWT avec access token, refresh token et cookies HTTP-only</span>
+        <span data-lang="en" style="display:none;">Implemented JWT authentication with access token, refresh token, and HTTP-only cookies</span>
+      </li>
+      <li>
+        <span data-lang="fr">Ajout de protections telles que rate limiting, validation d’entrées et headers de sécurité</span>
+        <span data-lang="en" style="display:none;">Added protections such as rate limiting, input validation, and security headers</span>
+      </li>
+      <li>
+        <span data-lang="fr">Conteneurisation complète avec Docker et automatisation CI/CD avec GitHub Actions</span>
+        <span data-lang="en" style="display:none;">Containerized the application with Docker and automated CI/CD with GitHub Actions</span>
+      </li>
+    </ul>
+
+    <div class="project-links">
+      <a href="#" target="_blank" rel="noopener">
+        <span data-lang="fr">Voir le code</span>
+        <span data-lang="en" style="display:none;">View Code</span>
+      </a>
+      <a href="#" target="_blank" rel="noopener">
+        <span data-lang="fr">Documentation</span>
+        <span data-lang="en" style="display:none;">Documentation</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Projet 2 -->
+  <section class="project-card reveal">
+    <div class="project-header">
+      <h3>
+        <span data-lang="fr">Bozo — Tableau de bord d’administration web</span>
+        <span data-lang="en" style="display:none;">Bozo — Web Administration Dashboard</span>
+      </h3>
+
+      <span class="project-badge">
+        <span data-lang="fr">Projet intégrateur</span>
+        <span data-lang="en" style="display:none;">Capstone Project</span>
+      </span>
+    </div>
+
+    <p class="project-summary">
       <span data-lang="fr">
-        Développement d’un site web d’administration pour une application de livraison d’alcool.
-        Gestion des produits, des magasins et du stock via une base de données.
+        Développement d’un système d’administration pour une application de livraison,
+        avec gestion des produits, des magasins et du stock.
       </span>
       <span data-lang="en" style="display:none;">
-        Built an administrative web dashboard for an alcohol delivery app.
-        Managed products, stores, and inventory using a database.
+        Built an administration system for a delivery application,
+        including product, store, and inventory management.
       </span>
     </p>
 
@@ -84,45 +168,63 @@
     </p>
 
     <p><strong>
-      <span data-lang="fr">Contributions principales :</span>
-      <span data-lang="en" style="display:none;">Main Contributions:</span>
+      <span data-lang="fr">Réalisations clés :</span>
+      <span data-lang="en" style="display:none;">Key Contributions:</span>
     </strong></p>
 
     <ul>
       <li>
-        <span data-lang="fr">Création d’interfaces admin (CRUD) : ajout/modification/suppression</span>
-        <span data-lang="en" style="display:none;">Built admin CRUD interfaces: create/update/delete</span>
+        <span data-lang="fr">Création d’interfaces administratives permettant l’ajout, la modification et la suppression de données</span>
+        <span data-lang="en" style="display:none;">Built admin interfaces enabling creation, update, and deletion of data</span>
       </li>
       <li>
-        <span data-lang="fr">Connexion au backend et gestion des requêtes</span>
-        <span data-lang="en" style="display:none;">Connected the UI to the backend and handled requests</span>
+        <span data-lang="fr">Connexion du frontend au backend pour la gestion des requêtes et des opérations CRUD</span>
+        <span data-lang="en" style="display:none;">Connected frontend to backend for request handling and CRUD operations</span>
       </li>
       <li>
-        <span data-lang="fr">Organisation du code et amélioration de la maintenabilité</span>
-        <span data-lang="en" style="display:none;">Improved code structure and maintainability</span>
+        <span data-lang="fr">Organisation du code pour améliorer la lisibilité, la structure et la maintenabilité du projet</span>
+        <span data-lang="en" style="display:none;">Improved code organization for readability, structure, and maintainability</span>
+      </li>
+      <li>
+        <span data-lang="fr">Conception d’une interface orientée utilisation réelle pour la gestion opérationnelle</span>
+        <span data-lang="en" style="display:none;">Designed a practical interface intended for real operational management</span>
       </li>
     </ul>
+
+    <div class="project-links">
+      <a href="#" target="_blank" rel="noopener">
+        <span data-lang="fr">Voir le projet</span>
+        <span data-lang="en" style="display:none;">View Project</span>
+      </a>
+      <a href="#" target="_blank" rel="noopener">
+        <span data-lang="fr">Code source</span>
+        <span data-lang="en" style="display:none;">Source Code</span>
+      </a>
+    </div>
   </section>
 
-  <!-- ✅ Projet 2 -->
-  <section class="reveal">
-    <h3>
-      <span data-lang="fr">Application bancaire — Java (Swing / MVC / Observer)</span>
-      <span data-lang="en" style="display:none;">Banking App — Java (Swing / MVC / Observer)</span>
-    </h3>
+  <!-- Projet 3 -->
+  <section class="project-card reveal">
+    <div class="project-header">
+      <h3>
+        <span data-lang="fr">Application bancaire — Java, Swing, MVC</span>
+        <span data-lang="en" style="display:none;">Banking Application — Java, Swing, MVC</span>
+      </h3>
 
-    <p>
-      <strong>
-        <span data-lang="fr">Description :</span>
-        <span data-lang="en" style="display:none;">Description:</span>
-      </strong>
+      <span class="project-badge">
+        <span data-lang="fr">Projet académique</span>
+        <span data-lang="en" style="display:none;">Academic Project</span>
+      </span>
+    </div>
+
+    <p class="project-summary">
       <span data-lang="fr">
-        Application bancaire avec interface graphique, affichage des informations de compte
-        et historique des transactions, en utilisant une architecture MVC.
+        Application bancaire avec interface graphique permettant l’affichage
+        d’informations de compte et de l’historique des transactions.
       </span>
       <span data-lang="en" style="display:none;">
-        Banking application with a graphical interface, account information display,
-        and transaction history using an MVC architecture.
+        Banking application with a graphical interface for displaying
+        account information and transaction history.
       </span>
     </p>
 
@@ -135,35 +237,52 @@
     </p>
 
     <p><strong>
-      <span data-lang="fr">Contributions principales :</span>
-      <span data-lang="en" style="display:none;">Main Contributions:</span>
+      <span data-lang="fr">Réalisations clés :</span>
+      <span data-lang="en" style="display:none;">Key Contributions:</span>
     </strong></p>
 
     <ul>
       <li>
-        <span data-lang="fr">Conception des vues (JFrame, panneaux, tableaux)</span>
-        <span data-lang="en" style="display:none;">Designed UI views (JFrame, panels, tables)</span>
+        <span data-lang="fr">Conception de l’interface utilisateur avec JFrame, panneaux, boutons et tableaux</span>
+        <span data-lang="en" style="display:none;">Designed the user interface using JFrame, panels, buttons, and tables</span>
       </li>
       <li>
-        <span data-lang="fr">Structure MVC et séparation logique / interface</span>
-        <span data-lang="en" style="display:none;">Implemented MVC structure and separation of concerns</span>
+        <span data-lang="fr">Application de l’architecture MVC pour séparer la logique métier et l’interface</span>
+        <span data-lang="en" style="display:none;">Applied MVC architecture to separate business logic from the interface</span>
       </li>
       <li>
-        <span data-lang="fr">Affichage dynamique des données (transactions, solde, informations utilisateur)</span>
-        <span data-lang="en" style="display:none;">Dynamic data display (transactions, balance, user info)</span>
+        <span data-lang="fr">Affichage dynamique des données utilisateur, du solde et des transactions</span>
+        <span data-lang="en" style="display:none;">Implemented dynamic display of user data, balances, and transactions</span>
+      </li>
+      <li>
+        <span data-lang="fr">Travail sur la structure du projet pour favoriser l’évolutivité et la clarté du code</span>
+        <span data-lang="en" style="display:none;">Worked on project structure to improve scalability and code clarity</span>
       </li>
     </ul>
+
+    <div class="project-links">
+      <a href="#" target="_blank" rel="noopener">
+        <span data-lang="fr">Voir le code</span>
+        <span data-lang="en" style="display:none;">View Code</span>
+      </a>
+    </div>
   </section>
 
-  <!-- ✅ À venir -->
-  <section>
+  <!-- Section à venir -->
+  <section class="next-section reveal">
     <h3>
-      <span data-lang="fr">À venir</span>
-      <span data-lang="en" style="display:none;">Coming Next</span>
+      <span data-lang="fr">Autres projets à venir</span>
+      <span data-lang="en" style="display:none;">More Projects Coming Soon</span>
     </h3>
     <p>
-      <span data-lang="fr">Je continue d’ajouter des projets (web, Java, C) au fil de mon parcours.</span>
-      <span data-lang="en" style="display:none;">I’m continuously adding new projects (web, Java, C) as I progress.</span>
+      <span data-lang="fr">
+        J’ajoute progressivement de nouveaux projets en développement web, Java, backend,
+        sécurité applicative et automatisation.
+      </span>
+      <span data-lang="en" style="display:none;">
+        I am continuously adding new projects in web development, Java, backend engineering,
+        application security, and automation.
+      </span>
     </p>
   </section>
 
