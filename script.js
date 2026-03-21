@@ -1,82 +1,96 @@
-// Smooth WOW animations (no libraries)
-
-function setActiveNav() {
-  const path = window.location.pathname.split("/").pop() || "index.html";
-  document.querySelectorAll("nav a").forEach(a => {
-    const href = (a.getAttribute("href") || "").trim();
-    a.classList.toggle("active", href === path);
-  });
-}
-
-function revealOnScroll() {
-  const els = document.querySelectorAll(".reveal");
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) e.target.classList.add("show");
-    });
-  }, { threshold: 0.12 });
-
-  els.forEach(el => io.observe(el));
-}
-
-function pageFadeIn() {
-  const page = document.querySelector(".page");
-  if (!page) return;
-  requestAnimationFrame(() => page.classList.add("ready"));
-}
-
-// OPTIONAL: fade-out when clicking internal links
-function pageFadeOutLinks() {
-  const page = document.querySelector(".page");
-  if (!page) return;
-
-  document.querySelectorAll("a").forEach(a => {
-    const href = a.getAttribute("href");
-    if (!href) return;
-
-    const isInternal = href.endsWith(".html") && !href.startsWith("http");
-    if (!isInternal) return;
-
-    a.addEventListener("click", (ev) => {
-      // Allow new tab / modified clicks
-      if (ev.metaKey || ev.ctrlKey || ev.shiftKey || ev.altKey) return;
-
-      ev.preventDefault();
-      page.classList.remove("ready");
-      setTimeout(() => window.location.href = href, 160);
-    });
-  });
-}
-
 document.addEventListener("DOMContentLoaded", () => {
+  const revealElements = document.querySelectorAll(".reveal");
+  const langToggle = document.getElementById("langToggle");
+  const navToggle = document.getElementById("navToggle");
+  const navLinks = document.getElementById("navLinks");
+  const sectionLinks = document.querySelectorAll(".nav-links a[href^='#']");
+  const sections = document.querySelectorAll("main section[id]");
+
+  let currentLang = "fr";
+
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    },
+    {
+      threshold: 0.12,
+    }
+  );
+
+  revealElements.forEach((element) => {
+    revealObserver.observe(element);
+  });
+
+  function setLanguage(lang) {
+    const frElements = document.querySelectorAll('[data-lang="fr"]');
+    const enElements = document.querySelectorAll('[data-lang="en"]');
+
+    if (lang === "fr") {
+      frElements.forEach((el) => {
+        el.style.display = "";
+      });
+      enElements.forEach((el) => {
+        el.style.display = "none";
+      });
+      langToggle.textContent = "EN";
+      document.documentElement.lang = "fr";
+    } else {
+      frElements.forEach((el) => {
+        el.style.display = "none";
+      });
+      enElements.forEach((el) => {
+        el.style.display = "";
+      });
+      langToggle.textContent = "FR";
+      document.documentElement.lang = "en";
+    }
+
+    currentLang = lang;
+  }
+
+  langToggle.addEventListener("click", () => {
+    setLanguage(currentLang === "fr" ? "en" : "fr");
+  });
+
+  setLanguage("fr");
+
+  if (navToggle) {
+    navToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("open");
+    });
+  }
+
+  sectionLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("open");
+    });
+  });
+
+  function setActiveNav() {
+    let currentSectionId = "";
+
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop - 140;
+      const sectionHeight = section.offsetHeight;
+
+      if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+        currentSectionId = section.getAttribute("id");
+      }
+    });
+
+    sectionLinks.forEach((link) => {
+      link.classList.remove("active");
+      const href = link.getAttribute("href");
+      if (href === `#${currentSectionId}`) {
+        link.classList.add("active");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", setActiveNav);
   setActiveNav();
-  revealOnScroll();
-  pageFadeIn();
-  pageFadeOutLinks();
 });
-
-(function () {
-  const STORAGE_KEY = "site_lang";
-  const btn = document.getElementById("langToggle");
-
-  function applyLang(lang) {
-    document.querySelectorAll("[data-lang]").forEach(el => {
-      el.style.display = (el.getAttribute("data-lang") === lang) ? "" : "none";
-    });
-
-    if (btn) btn.textContent = (lang === "fr") ? "EN" : "FR";
-    localStorage.setItem(STORAGE_KEY, lang);
-    document.documentElement.setAttribute("lang", lang);
-  }
-
-  const saved = localStorage.getItem(STORAGE_KEY);
-  applyLang(saved || "fr");
-
-  if (btn) {
-    btn.addEventListener("click", () => {
-      const current = localStorage.getItem(STORAGE_KEY) || "fr";
-      applyLang(current === "fr" ? "en" : "fr");
-    });
-  }
-})();
-
