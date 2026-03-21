@@ -566,3 +566,41 @@ html, body { overflow-x: hidden; }
 .lang-btn:active{
   transform: translateY(0) scale(.98);
 }
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 80px 20px;
+}
+
+.hero-left {
+  max-width: 600px;
+}
+
+.hero-left h1 {
+  font-size: 48px;
+  font-weight: 800;
+}
+
+.hero-left h2 {
+  color: #7c3aed;
+  margin-top: 10px;
+}
+
+.hero-left p {
+  margin-top: 15px;
+  color: #ccc;
+}
+
+.badge {
+  background: rgba(124,58,237,0.2);
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+}
+
+.hero-right img {
+  width: 280px;
+  border-radius: 20px;
+}
