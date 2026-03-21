@@ -1,195 +1,577 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Edwar Nazzarian | Portfolio</title>
-  <link rel="stylesheet" href="style.css?v=2">
+  <meta
+    name="description"
+    content="Portfolio professionnel d’Edwar Nazzarian, étudiant en génie logiciel à l’ÉTS à Montréal."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+  <div class="bg-orb orb-3"></div>
 
-<section id="home" class="hero-section">
-  <div class="hero-left">
-    <span class="badge">🟢 Open to Internships</span>
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="#home" class="brand">Edwar Nazzarian</a>
 
-    <h1>Edwar Nazzarian</h1>
-    <h2>Software Engineering Student</h2>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-    <p>
-      Building practical, secure, and scalable software solutions.
-      Based in Montreal, Canada.
-    </p>
+      <div class="nav-links" id="navLinks">
+        <a href="#about" data-lang="fr">À propos</a>
+        <a href="#about" data-lang="en" style="display:none;">About</a>
 
-    <div class="hero-actions">
-      <a href="#projects" class="btn primary">View Projects</a>
-      <a href="#contact" class="btn">Contact Me</a>
-    </div>
-  </div>
+        <a href="#skills" data-lang="fr">Compétences</a>
+        <a href="#skills" data-lang="en" style="display:none;">Skills</a>
 
-  <div class="hero-right">
-    <img src="profile.jpeg" alt="profile">
-  </div>
-</section>
-    <div class="hero-text">
-      <h1>Edwar Nazzarian</h1>
+        <a href="#projects" data-lang="fr">Projets</a>
+        <a href="#projects" data-lang="en" style="display:none;">Projects</a>
 
-      <p>
-        <span data-lang="fr">Étudiant en génie logiciel – ÉTS, Montréal</span>
-        <span data-lang="en" style="display:none;">Software Engineering Student – ÉTS, Montreal</span>
-      </p>
+        <a href="#education" data-lang="fr">Parcours</a>
+        <a href="#education" data-lang="en" style="display:none;">Education</a>
 
-      <div class="hero-actions">
-        <a class="btn primary" href="projects.html">
-          <span data-lang="fr">Voir mes projets</span>
-          <span data-lang="en" style="display:none;">View my projects</span>
+        <a href="#contact" data-lang="fr">Contact</a>
+        <a href="#contact" data-lang="en" style="display:none;">Contact</a>
+
+        <a class="resume-btn" href="cv.pdf" target="_blank">
+          <span data-lang="fr">CV</span>
+          <span data-lang="en" style="display:none;">Resume</span>
         </a>
 
-        <a class="btn" href="contact.html">
-          <span data-lang="fr">Me contacter</span>
-          <span data-lang="en" style="display:none;">Contact me</span>
-        </a>
+        <button id="langToggle" type="button" class="lang-btn">EN</button>
       </div>
-    </div>
-  </div>
-</header>
+    </nav>
+  </header>
 
-<nav>
-  <a href="index.html">
-    <span data-lang="fr">Accueil</span>
-    <span data-lang="en" style="display:none;">Home</span>
-  </a>
+  <main>
+    <section id="home" class="hero section">
+      <div class="hero-text reveal">
+        <div class="status-badge">
+          <span class="status-dot"></span>
+          <span data-lang="fr">Ouvert aux stages</span>
+          <span data-lang="en" style="display:none;">Open to internships</span>
+        </div>
 
-  <a href="projects.html">
-    <span data-lang="fr">Projets</span>
-    <span data-lang="en" style="display:none;">Projects</span>
-  </a>
+        <p class="eyebrow">Edwar Nazzarian</p>
 
-  <a href="skills.html">
-    <span data-lang="fr">Compétences</span>
-    <span data-lang="en" style="display:none;">Skills</span>
-  </a>
+        <h1>
+          <span data-lang="fr">Étudiant en génie logiciel à Montréal</span>
+          <span data-lang="en" style="display:none;">Software Engineering Student in Montreal</span>
+        </h1>
 
-  <a href="education.html">
-    <span data-lang="fr">Parcours</span>
-    <span data-lang="en" style="display:none;">Education</span>
-  </a>
-
-  <a href="contact.html">
-    <span data-lang="fr">Contact</span>
-    <span data-lang="en" style="display:none;">Contact</span>
-  </a>
-
-  <!-- ✅ Bouton langue -->
-  <button id="langToggle" type="button" class="lang-btn">EN</button>
-</nav>
-
-<main class="page">
-  <h2 class="reveal">
-    <span data-lang="fr">Bienvenue</span>
-    <span data-lang="en" style="display:none;">Welcome</span>
-  </h2>
-
-  <section class="reveal">
-    <h3>
-      <span data-lang="fr">À propos</span>
-      <span data-lang="en" style="display:none;">About</span>
-    </h3>
-
-    <p>
-      <span data-lang="fr">
-        Je suis étudiant en génie logiciel à l’ÉTS. Ce portfolio présente mes projets,
-        mes compétences et mon parcours académique.
-      </span>
-      <span data-lang="en" style="display:none;">
-        I’m a Software Engineering student at ÉTS. This portfolio presents my projects,
-        skills, and academic background.
-      </span>
-    </p>
-  </section>
-
-  <section class="reveal">
-    <h3>
-      <span data-lang="fr">Ce que tu trouveras ici</span>
-      <span data-lang="en" style="display:none;">What you’ll find here</span>
-    </h3>
-
-    <div class="grid">
-      <div class="card">
-        <h4>
-          <span data-lang="fr">Projets</span>
-          <span data-lang="en" style="display:none;">Projects</span>
-        </h4>
-
-        <p>
-          <span data-lang="fr">Applications web / Java / Android avec détails techniques et rôle.</span>
-          <span data-lang="en" style="display:none;">Web / Java / Android apps with technical details and my role.</span>
+        <p class="hero-subtitle">
+          <span data-lang="fr">
+            Je conçois des applications web, des systèmes backend et des interfaces
+            claires avec une approche moderne, structurée et orientée résultats.
+          </span>
+          <span data-lang="en" style="display:none;">
+            I build web applications, backend systems, and clean interfaces with a
+            modern, structured, and results-driven approach.
+          </span>
         </p>
 
-        <a class="link" href="projects.html">
-          <span data-lang="fr">Accéder →</span>
-          <span data-lang="en" style="display:none;">Go →</span>
-        </a>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">
+            <span data-lang="fr">Voir mes projets</span>
+            <span data-lang="en" style="display:none;">View my projects</span>
+          </a>
+
+          <a href="#contact" class="btn btn-secondary">
+            <span data-lang="fr">Me contacter</span>
+            <span data-lang="en" style="display:none;">Contact me</span>
+          </a>
+        </div>
+
+        <div class="hero-mini-info">
+          <span>ÉTS</span>
+          <span>Montréal</span>
+          <span data-lang="fr">Développement logiciel</span>
+          <span data-lang="en" style="display:none;">Software Development</span>
+        </div>
       </div>
 
-      <div class="card">
-        <h4>
+      <div class="hero-photo reveal">
+        <div class="photo-frame">
+          <img src="profile.jpeg" alt="Photo de profil d’Edwar Nazzarian" />
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section reveal">
+      <div class="section-heading">
+        <p class="eyebrow">
+          <span data-lang="fr">À propos</span>
+          <span data-lang="en" style="display:none;">About</span>
+        </p>
+        <h2>
+          <span data-lang="fr">Un portfolio pensé pour convaincre un recruteur</span>
+          <span data-lang="en" style="display:none;">A portfolio designed to convince recruiters</span>
+        </h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="glass-card">
+          <p>
+            <span data-lang="fr">
+              Je suis étudiant en génie logiciel à l’ÉTS et je cherche des opportunités
+              de stage où je peux contribuer concrètement à des projets web, backend,
+              data ou logiciels.
+            </span>
+            <span data-lang="en" style="display:none;">
+              I am a Software Engineering student at ÉTS looking for internship
+              opportunities where I can contribute to web, backend, data, or software projects.
+            </span>
+          </p>
+        </div>
+
+        <div class="glass-card">
+          <p>
+            <span data-lang="fr">
+              J’aime construire des solutions propres, maintenables et utiles, avec une
+              attention particulière à la structure du code, à l’expérience utilisateur
+              et à la clarté technique.
+            </span>
+            <span data-lang="en" style="display:none;">
+              I enjoy building clean, maintainable, and useful solutions with strong
+              attention to code structure, user experience, and technical clarity.
+            </span>
+          </p>
+        </div>
+
+        <div class="glass-card feature-card">
+          <h3>
+            <span data-lang="fr">Ce que je peux apporter</span>
+            <span data-lang="en" style="display:none;">What I can bring</span>
+          </h3>
+          <ul>
+            <li>
+              <span data-lang="fr">Développement d’interfaces et d’outils web</span>
+              <span data-lang="en" style="display:none;">Web interface and tooling development</span>
+            </li>
+            <li>
+              <span data-lang="fr">Conception backend et APIs</span>
+              <span data-lang="en" style="display:none;">Backend and API design</span>
+            </li>
+            <li>
+              <span data-lang="fr">Bonne structure de code et logique applicative</span>
+              <span data-lang="en" style="display:none;">Strong code structure and application logic</span>
+            </li>
+            <li>
+              <span data-lang="fr">Apprentissage rapide et esprit d’équipe</span>
+              <span data-lang="en" style="display:none;">Fast learning and team mindset</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section reveal">
+      <div class="section-heading">
+        <p class="eyebrow">
           <span data-lang="fr">Compétences</span>
           <span data-lang="en" style="display:none;">Skills</span>
-        </h4>
-
-        <p>
-          <span data-lang="fr">Langages, outils, méthodologies (POO, MVC, tests, débogage…).</span>
-          <span data-lang="en" style="display:none;">Languages, tools, methods (OOP, MVC, testing, debugging…).</span>
         </p>
-
-        <a class="link" href="skills.html">
-          <span data-lang="fr">Accéder →</span>
-          <span data-lang="en" style="display:none;">Go →</span>
-        </a>
+        <h2>
+          <span data-lang="fr">Compétences techniques</span>
+          <span data-lang="en" style="display:none;">Technical skills</span>
+        </h2>
       </div>
 
-      <div class="card">
-        <h4>
+      <div class="skills-grid">
+        <article class="skill-card">
+          <h3>
+            <span data-lang="fr">Langages</span>
+            <span data-lang="en" style="display:none;">Languages</span>
+          </h3>
+          <div class="tags">
+            <span>C</span>
+            <span>Java</span>
+            <span>JavaScript</span>
+            <span>SQL</span>
+            <span data-lang="fr">Assembleur</span>
+            <span data-lang="en" style="display:none;">Assembly</span>
+          </div>
+        </article>
+
+        <article class="skill-card">
+          <h3>
+            <span data-lang="fr">Web & backend</span>
+            <span data-lang="en" style="display:none;">Web & backend</span>
+          </h3>
+          <div class="tags">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>Node.js</span>
+            <span>Express</span>
+            <span>REST API</span>
+            <span>PHP</span>
+            <span>MySQL</span>
+          </div>
+        </article>
+
+        <article class="skill-card">
+          <h3>
+            <span data-lang="fr">Mobile & logiciel</span>
+            <span data-lang="en" style="display:none;">Mobile & software</span>
+          </h3>
+          <div class="tags">
+            <span>Android (Java)</span>
+            <span>Java Swing</span>
+            <span>MVC</span>
+            <span>Observer</span>
+            <span>POO</span>
+          </div>
+        </article>
+
+        <article class="skill-card">
+          <h3>
+            <span data-lang="fr">Outils</span>
+            <span data-lang="en" style="display:none;">Tools</span>
+          </h3>
+          <div class="tags">
+            <span>Git</span>
+            <span>GitLab</span>
+            <span>Maven</span>
+            <span>VS Code</span>
+            <span>IntelliJ</span>
+            <span>Android Studio</span>
+            <span>Docker</span>
+            <span>Power BI</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" class="section reveal">
+      <div class="section-heading">
+        <p class="eyebrow">
+          <span data-lang="fr">Projets</span>
+          <span data-lang="en" style="display:none;">Projects</span>
+        </p>
+        <h2>
+          <span data-lang="fr">Projets sélectionnés</span>
+          <span data-lang="en" style="display:none;">Selected projects</span>
+        </h2>
+      </div>
+
+      <div class="projects-grid">
+        <article class="project-card">
+          <div class="project-top">
+            <span class="project-type">
+              <span data-lang="fr">Projet personnel</span>
+              <span data-lang="en" style="display:none;">Personal Project</span>
+            </span>
+            <h3>Secure API Platform</h3>
+            <p>
+              <span data-lang="fr">
+                API REST sécurisée avec authentification, contrôle d’accès, protection
+                des requêtes et déploiement conteneurisé.
+              </span>
+              <span data-lang="en" style="display:none;">
+                Secure REST API with authentication, access control, request protection,
+                and containerized deployment.
+              </span>
+            </p>
+          </div>
+
+          <div class="tags">
+            <span>Node.js</span>
+            <span>Express</span>
+            <span>PostgreSQL</span>
+            <span>Docker</span>
+            <span>JWT</span>
+            <span>GitHub Actions</span>
+          </div>
+
+          <div class="project-links">
+            <a href="https://github.com/killua11111010100" target="_blank" rel="noopener">
+              GitHub
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-top">
+            <span class="project-type">
+              <span data-lang="fr">Projet académique</span>
+              <span data-lang="en" style="display:none;">Academic Project</span>
+            </span>
+            <h3>FinanceJ</h3>
+            <p>
+              <span data-lang="fr">
+                Application Java de suivi financier avec logique applicative,
+                structuration de données et persistance SQL.
+              </span>
+              <span data-lang="en" style="display:none;">
+                Java financial tracking application with business logic,
+                data structure, and SQL persistence.
+              </span>
+            </p>
+          </div>
+
+          <div class="tags">
+            <span>Java</span>
+            <span>SQL</span>
+            <span>Maven</span>
+            <span>Testing</span>
+          </div>
+
+          <div class="project-links">
+            <a href="projects.html" target="_blank" rel="noopener">
+              <span data-lang="fr">Détails</span>
+              <span data-lang="en" style="display:none;">Details</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-top">
+            <span class="project-type">
+              <span data-lang="fr">Projet intégrateur</span>
+              <span data-lang="en" style="display:none;">Capstone Project</span>
+            </span>
+            <h3>Bozo Admin Dashboard</h3>
+            <p>
+              <span data-lang="fr">
+                Tableau de bord web d’administration pour la gestion de produits,
+                magasins et stock.
+              </span>
+              <span data-lang="en" style="display:none;">
+                Web administration dashboard for managing products, stores, and inventory.
+              </span>
+            </p>
+          </div>
+
+          <div class="tags">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>PHP</span>
+            <span>MySQL</span>
+          </div>
+
+          <div class="project-links">
+            <a href="https://github.com/killua11111010100/TCH099-Boozy.git" target="_blank" rel="noopener">
+              GitHub
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-top">
+            <span class="project-type">
+              <span data-lang="fr">Projet académique</span>
+              <span data-lang="en" style="display:none;">Academic Project</span>
+            </span>
+            <h3>
+              <span data-lang="fr">Application bancaire</span>
+              <span data-lang="en" style="display:none;">Banking Application</span>
+            </h3>
+            <p>
+              <span data-lang="fr">
+                Application Java Swing en architecture MVC pour afficher des informations
+                de compte et l’historique des transactions.
+              </span>
+              <span data-lang="en" style="display:none;">
+                Java Swing MVC banking application displaying account information
+                and transaction history.
+              </span>
+            </p>
+          </div>
+
+          <div class="tags">
+            <span>Java</span>
+            <span>Swing</span>
+            <span>MVC</span>
+            <span>Observer</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-top">
+            <span class="project-type">
+              <span data-lang="fr">Projet data</span>
+              <span data-lang="en" style="display:none;">Data Project</span>
+            </span>
+            <h3>Power BI Dashboard</h3>
+            <p>
+              <span data-lang="fr">
+                Création de tableaux de bord pour transformer des données brutes
+                en informations visuelles exploitables.
+              </span>
+              <span data-lang="en" style="display:none;">
+                Dashboard design project turning raw data into clear visual insights.
+              </span>
+            </p>
+          </div>
+
+          <div class="tags">
+            <span>Power BI</span>
+            <span>Excel</span>
+            <span>Data Visualization</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-top">
+            <span class="project-type">
+              <span data-lang="fr">Projet mobile</span>
+              <span data-lang="en" style="display:none;">Mobile Project</span>
+            </span>
+            <h3>
+              <span data-lang="fr">Application Android</span>
+              <span data-lang="en" style="display:none;">Android Application</span>
+            </h3>
+            <p>
+              <span data-lang="fr">
+                Développement d’une application mobile en Java avec logique d’interface,
+                navigation et organisation du code.
+              </span>
+              <span data-lang="en" style="display:none;">
+                Android mobile application in Java with UI logic, navigation,
+                and structured code organization.
+              </span>
+            </p>
+          </div>
+
+          <div class="tags">
+            <span>Android</span>
+            <span>Java</span>
+            <span>Mobile UI</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="education" class="section reveal">
+      <div class="section-heading">
+        <p class="eyebrow">
           <span data-lang="fr">Parcours</span>
           <span data-lang="en" style="display:none;">Education</span>
-        </h4>
-
-        <p>
-          <span data-lang="fr">Cheminement universitaire + baccalauréat, cours clés, progression.</span>
-          <span data-lang="en" style="display:none;">Academic pathway + degree, key courses, progression.</span>
         </p>
-
-        <a class="link" href="education.html">
-          <span data-lang="fr">Accéder →</span>
-          <span data-lang="en" style="display:none;">Go →</span>
-        </a>
+        <h2>
+          <span data-lang="fr">Parcours académique</span>
+          <span data-lang="en" style="display:none;">Academic background</span>
+        </h2>
       </div>
-    </div>
-  </section>
 
-  <section class="reveal">
-    <h3>
-      <span data-lang="fr">Objectif</span>
-      <span data-lang="en" style="display:none;">Goal</span>
-    </h3>
+      <div class="timeline">
+        <article class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass-card">
+            <p class="timeline-date">2025 – <span data-lang="fr">présent</span><span data-lang="en" style="display:none;">present</span></p>
+            <h3>
+              <span data-lang="fr">Baccalauréat en génie logiciel</span>
+              <span data-lang="en" style="display:none;">Bachelor’s in Software Engineering</span>
+            </h3>
+            <p><strong>École de technologie supérieure (ÉTS), Montréal</strong></p>
+            <p>
+              <span data-lang="fr">
+                Formation axée sur le développement logiciel, la conception orientée
+                objet, les bases de données, le web, le mobile et la qualité logicielle.
+              </span>
+              <span data-lang="en" style="display:none;">
+                Program focused on software development, object-oriented design,
+                databases, web, mobile, and software quality.
+              </span>
+            </p>
+          </div>
+        </article>
 
-    <p>
-      <span data-lang="fr">
-        Je suis ouvert aux opportunités de stage et à des projets étudiants.
-        J’aime construire des solutions claires, maintenables et bien structurées.
-      </span>
-      <span data-lang="en" style="display:none;">
-        I’m open to internship opportunities and student projects.
-        I enjoy building clear, maintainable, and well-structured solutions.
-      </span>
-    </p>
-  </section>
-</main>
+        <article class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass-card">
+            <p class="timeline-date">2024 – 2025</p>
+            <h3>
+              <span data-lang="fr">Cheminement universitaire en technologie</span>
+              <span data-lang="en" style="display:none;">University Pathway in Technology</span>
+            </h3>
+            <p><strong>École de technologie supérieure (ÉTS), Montréal</strong></p>
+            <p>
+              <span data-lang="fr">
+                Année préparatoire centrée sur les bases en programmation,
+                développement logiciel et méthodologie universitaire en génie.
+              </span>
+              <span data-lang="en" style="display:none;">
+                Preparatory year focused on programming fundamentals,
+                software development, and engineering study methods.
+              </span>
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
 
-<footer>
-  <p>© 2026 – Edwar Nazzarian</p>
-</footer>
+    <section id="contact" class="section reveal">
+      <div class="section-heading">
+        <p class="eyebrow">
+          <span data-lang="fr">Contact</span>
+          <span data-lang="en" style="display:none;">Contact</span>
+        </p>
+        <h2>
+          <span data-lang="fr">Entrons en contact</span>
+          <span data-lang="en" style="display:none;">Let’s get in touch</span>
+        </h2>
+      </div>
 
-<script src="script.js"></script>
+      <div class="contact-grid">
+        <div class="glass-card">
+          <h3>Email</h3>
+          <p>
+            <a href="mailto:edwarnazzarian75@gmail.com">edwarnazzarian75@gmail.com</a>
+          </p>
+        </div>
+
+        <div class="glass-card">
+          <h3>GitHub</h3>
+          <p>
+            <a href="https://github.com/killua11111010100" target="_blank" rel="noopener">
+              github.com/killua11111010100
+            </a>
+          </p>
+        </div>
+
+        <div class="glass-card">
+          <h3>LinkedIn</h3>
+          <p>
+            <a href="https://www.linkedin.com/in/edwar-nazzarian/" target="_blank" rel="noopener">
+              linkedin.com/in/edwar-nazzarian
+            </a>
+          </p>
+        </div>
+
+        <div class="glass-card">
+          <h3>
+            <span data-lang="fr">Disponibilité</span>
+            <span data-lang="en" style="display:none;">Availability</span>
+          </h3>
+          <p>
+            <span data-lang="fr">Ouvert aux stages et aux opportunités étudiantes.</span>
+            <span data-lang="en" style="display:none;">Open to internships and student opportunities.</span>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 – Edwar Nazzarian</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
