@@ -11,12 +11,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
     rel="stylesheet"
   />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="scroll-progress" id="scrollProgress"></div>
+
   <div class="bg-orb orb-1"></div>
   <div class="bg-orb orb-2"></div>
   <div class="bg-orb orb-3"></div>
@@ -31,27 +33,27 @@
         <span></span>
       </button>
 
-   <div class="nav-links" id="navLinks">
-  <a href="#about" data-lang="fr">À propos</a>
-  <a href="#about" data-lang="en" style="display:none;">About</a>
+      <div class="nav-links" id="navLinks">
+        <a href="#about" data-lang="fr">À propos</a>
+        <a href="#about" data-lang="en" style="display:none;">About</a>
 
-  <a href="#skills" data-lang="fr">Compétences</a>
-  <a href="#skills" data-lang="en" style="display:none;">Skills</a>
+        <a href="#skills" data-lang="fr">Compétences</a>
+        <a href="#skills" data-lang="en" style="display:none;">Skills</a>
 
-  <a href="#projects" data-lang="fr">Projets</a>
-  <a href="#projects" data-lang="en" style="display:none;">Projects</a>
+        <a href="#projects" data-lang="fr">Projets</a>
+        <a href="#projects" data-lang="en" style="display:none;">Projects</a>
 
-  <a href="#education" data-lang="fr">Parcours</a>
-  <a href="#education" data-lang="en" style="display:none;">Education</a>
+        <a href="#education" data-lang="fr">Parcours</a>
+        <a href="#education" data-lang="en" style="display:none;">Education</a>
 
-  <a href="#contact" data-lang="fr">Contact</a>
-  <a href="#contact" data-lang="en" style="display:none;">Contact</a>
+        <a href="#contact" data-lang="fr">Contact</a>
+        <a href="#contact" data-lang="en" style="display:none;">Contact</a>
 
-  <a class="resume-btn" href="cv-fr.pdf" target="_blank" data-lang="fr">CV (FR)</a>
-  <a class="resume-btn" href="cv-en.pdf" target="_blank" data-lang="en" style="display:none;">Resume (EN)</a>
+        <a class="resume-btn" href="cv-fr.pdf" target="_blank" data-lang="fr">CV (FR)</a>
+        <a class="resume-btn" href="cv-en.pdf" target="_blank" data-lang="en" style="display:none;">Resume (EN)</a>
 
-  <button id="langToggle" type="button" class="lang-btn">EN</button>
-</div>
+        <button id="langToggle" type="button" class="lang-btn">EN</button>
+      </div>
     </nav>
   </header>
 
@@ -74,13 +76,21 @@
         <p class="hero-subtitle">
           <span data-lang="fr">
             Je conçois des applications web, des systèmes backend et des interfaces
-            claires avec une approche moderne, structurée et orientée résultats.
+            modernes avec une approche structurée, propre et orientée résultats.
           </span>
           <span data-lang="en" style="display:none;">
-            I build web applications, backend systems, and clean interfaces with a
-            modern, structured, and results-driven approach.
+            I build web applications, backend systems, and modern interfaces with a
+            structured, clean, and results-driven approach.
           </span>
         </p>
+
+        <div class="hero-stack">
+          <span>Frontend</span>
+          <span>Backend</span>
+          <span>APIs</span>
+          <span>Java</span>
+          <span>SQL</span>
+        </div>
 
         <div class="hero-actions">
           <a href="#projects" class="btn btn-primary">
@@ -103,9 +113,63 @@
       </div>
 
       <div class="hero-photo reveal">
-        <div class="photo-frame">
-          <img src="profile.jpeg" alt="Photo de profil d’Edwar Nazzarian" />
+        <div class="photo-wrapper">
+          <div class="photo-frame">
+            <img src="profile.jpeg" alt="Photo de profil d’Edwar Nazzarian" />
+          </div>
+
+          <div class="floating-card floating-card-1">
+            <strong>3+</strong>
+            <span data-lang="fr">Projets mis en avant</span>
+            <span data-lang="en" style="display:none;">Featured projects</span>
+          </div>
+
+          <div class="floating-card floating-card-2">
+            <strong data-lang="fr">Disponible</strong>
+            <strong data-lang="en" style="display:none;">Available</strong>
+            <span data-lang="fr">Pour un stage</span>
+            <span data-lang="en" style="display:none;">For internships</span>
+          </div>
         </div>
+      </div>
+    </section>
+
+    <section class="section highlights reveal">
+      <div class="section-heading">
+        <p class="eyebrow">
+          <span data-lang="fr">Aperçu</span>
+          <span data-lang="en" style="display:none;">Overview</span>
+        </p>
+        <h2>
+          <span data-lang="fr">Quelques points forts</span>
+          <span data-lang="en" style="display:none;">A few highlights</span>
+        </h2>
+      </div>
+
+      <div class="highlights-grid">
+        <article class="highlight-card">
+          <h3>6</h3>
+          <p data-lang="fr">Projets présentés</p>
+          <p data-lang="en" style="display:none;">Projects showcased</p>
+        </article>
+
+        <article class="highlight-card">
+          <h3>FR / EN</h3>
+          <p data-lang="fr">Portfolio bilingue</p>
+          <p data-lang="en" style="display:none;">Bilingual portfolio</p>
+        </article>
+
+        <article class="highlight-card">
+          <h3>Web + Logiciel</h3>
+          <p data-lang="fr">Compétences variées</p>
+          <p data-lang="en" style="display:none;">Versatile skill set</p>
+        </article>
+
+        <article class="highlight-card">
+          <h3>API / Java / SQL</h3>
+          <p data-lang="fr">Stack principale</p>
+          <p data-lang="en" style="display:none;">Main stack</p>
+        </article>
       </div>
     </section>
 
@@ -127,11 +191,11 @@
             <span data-lang="fr">
               Je suis étudiant en génie logiciel à l’ÉTS et je cherche des opportunités
               de stage où je peux contribuer concrètement à des projets web, backend,
-              data ou logiciels.
+              logiciels ou data.
             </span>
             <span data-lang="en" style="display:none;">
               I am a Software Engineering student at ÉTS looking for internship
-              opportunities where I can contribute to web, backend, data, or software projects.
+              opportunities where I can contribute to web, backend, software, or data projects.
             </span>
           </p>
         </div>
@@ -191,6 +255,7 @@
 
       <div class="skills-grid">
         <article class="skill-card">
+          <div class="card-icon">⌘</div>
           <h3>
             <span data-lang="fr">Langages</span>
             <span data-lang="en" style="display:none;">Languages</span>
@@ -206,6 +271,7 @@
         </article>
 
         <article class="skill-card">
+          <div class="card-icon">⚡</div>
           <h3>
             <span data-lang="fr">Web & backend</span>
             <span data-lang="en" style="display:none;">Web & backend</span>
@@ -222,6 +288,7 @@
         </article>
 
         <article class="skill-card">
+          <div class="card-icon">📱</div>
           <h3>
             <span data-lang="fr">Mobile & logiciel</span>
             <span data-lang="en" style="display:none;">Mobile & software</span>
@@ -236,6 +303,7 @@
         </article>
 
         <article class="skill-card">
+          <div class="card-icon">🛠</div>
           <h3>
             <span data-lang="fr">Outils</span>
             <span data-lang="en" style="display:none;">Tools</span>
@@ -268,6 +336,9 @@
 
       <div class="projects-grid">
         <article class="project-card">
+          <div class="project-visual visual-api">
+            <span>Secure API</span>
+          </div>
           <div class="project-top">
             <span class="project-type">
               <span data-lang="fr">Projet personnel</span>
@@ -284,6 +355,11 @@
                 and containerized deployment.
               </span>
             </p>
+          </div>
+
+          <div class="impact-line">
+            <span data-lang="fr">JWT • Refresh Token • PostgreSQL • Docker</span>
+            <span data-lang="en" style="display:none;">JWT • Refresh Token • PostgreSQL • Docker</span>
           </div>
 
           <div class="tags">
@@ -303,6 +379,9 @@
         </article>
 
         <article class="project-card">
+          <div class="project-visual visual-finance">
+            <span>FinanceJ</span>
+          </div>
           <div class="project-top">
             <span class="project-type">
               <span data-lang="fr">Projet académique</span>
@@ -321,6 +400,11 @@
             </p>
           </div>
 
+          <div class="impact-line">
+            <span data-lang="fr">Java • SQL • Architecture claire</span>
+            <span data-lang="en" style="display:none;">Java • SQL • Clean architecture</span>
+          </div>
+
           <div class="tags">
             <span>Java</span>
             <span>SQL</span>
@@ -337,6 +421,9 @@
         </article>
 
         <article class="project-card">
+          <div class="project-visual visual-dashboard">
+            <span>Admin Dashboard</span>
+          </div>
           <div class="project-top">
             <span class="project-type">
               <span data-lang="fr">Projet intégrateur</span>
@@ -352,6 +439,11 @@
                 Web administration dashboard for managing products, stores, and inventory.
               </span>
             </p>
+          </div>
+
+          <div class="impact-line">
+            <span data-lang="fr">Gestion admin • Produits • Stock</span>
+            <span data-lang="en" style="display:none;">Admin panel • Products • Inventory</span>
           </div>
 
           <div class="tags">
@@ -370,6 +462,9 @@
         </article>
 
         <article class="project-card">
+          <div class="project-visual visual-bank">
+            <span>Banking App</span>
+          </div>
           <div class="project-top">
             <span class="project-type">
               <span data-lang="fr">Projet académique</span>
@@ -391,6 +486,11 @@
             </p>
           </div>
 
+          <div class="impact-line">
+            <span data-lang="fr">Java Swing • MVC • Observer</span>
+            <span data-lang="en" style="display:none;">Java Swing • MVC • Observer</span>
+          </div>
+
           <div class="tags">
             <span>Java</span>
             <span>Swing</span>
@@ -400,6 +500,9 @@
         </article>
 
         <article class="project-card">
+          <div class="project-visual visual-powerbi">
+            <span>Power BI</span>
+          </div>
           <div class="project-top">
             <span class="project-type">
               <span data-lang="fr">Projet data</span>
@@ -417,6 +520,11 @@
             </p>
           </div>
 
+          <div class="impact-line">
+            <span data-lang="fr">Visualisation • Reporting • Clarté</span>
+            <span data-lang="en" style="display:none;">Visualization • Reporting • Clarity</span>
+          </div>
+
           <div class="tags">
             <span>Power BI</span>
             <span>Excel</span>
@@ -425,6 +533,9 @@
         </article>
 
         <article class="project-card">
+          <div class="project-visual visual-android">
+            <span>Android</span>
+          </div>
           <div class="project-top">
             <span class="project-type">
               <span data-lang="fr">Projet mobile</span>
@@ -444,6 +555,11 @@
                 and structured code organization.
               </span>
             </p>
+          </div>
+
+          <div class="impact-line">
+            <span data-lang="fr">Java • Navigation • UI mobile</span>
+            <span data-lang="en" style="display:none;">Java • Navigation • Mobile UI</span>
           </div>
 
           <div class="tags">
@@ -471,7 +587,11 @@
         <article class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-content glass-card">
-            <p class="timeline-date">2025 – <span data-lang="fr">présent</span><span data-lang="en" style="display:none;">present</span></p>
+            <p class="timeline-date">
+              2025 –
+              <span data-lang="fr">présent</span>
+              <span data-lang="en" style="display:none;">present</span>
+            </p>
             <h3>
               <span data-lang="fr">Baccalauréat en génie logiciel</span>
               <span data-lang="en" style="display:none;">Bachelor’s in Software Engineering</span>
@@ -562,6 +682,27 @@
             <span data-lang="en" style="display:none;">Open to internships and student opportunities.</span>
           </p>
         </div>
+
+        <div class="glass-card contact-cta">
+          <h3>
+            <span data-lang="fr">Travaillons ensemble</span>
+            <span data-lang="en" style="display:none;">Let’s work together</span>
+          </h3>
+          <p>
+            <span data-lang="fr">
+              Je suis actuellement à la recherche d’un stage où je peux apporter mes
+              compétences en développement logiciel, backend et conception d’interfaces.
+            </span>
+            <span data-lang="en" style="display:none;">
+              I am currently looking for an internship where I can contribute in
+              software development, backend, and interface design.
+            </span>
+          </p>
+          <a href="mailto:edwarnazzarian75@gmail.com" class="btn btn-primary">
+            <span data-lang="fr">M’écrire</span>
+            <span data-lang="en" style="display:none;">Send me an email</span>
+          </a>
+        </div>
       </div>
     </section>
   </main>
@@ -569,6 +710,8 @@
   <footer class="site-footer">
     <p>© 2026 – Edwar Nazzarian</p>
   </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Retour en haut">↑</button>
 
   <script src="script.js"></script>
 </body>
