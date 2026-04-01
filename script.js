@@ -5,6 +5,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const navLinks = document.getElementById("navLinks");
   const sectionLinks = document.querySelectorAll(".nav-links a[href^='#']");
   const sections = document.querySelectorAll("main section[id]");
+  const backToTop = document.getElementById("backToTop");
+  const scrollProgress = document.getElementById("scrollProgress");
 
   let currentLang = "fr";
 
@@ -33,28 +35,40 @@ document.addEventListener("DOMContentLoaded", () => {
       frElements.forEach((el) => {
         el.style.display = "";
       });
+
       enElements.forEach((el) => {
         el.style.display = "none";
       });
-      langToggle.textContent = "EN";
+
+      if (langToggle) {
+        langToggle.textContent = "EN";
+      }
+
       document.documentElement.lang = "fr";
     } else {
       frElements.forEach((el) => {
         el.style.display = "none";
       });
+
       enElements.forEach((el) => {
         el.style.display = "";
       });
-      langToggle.textContent = "FR";
+
+      if (langToggle) {
+        langToggle.textContent = "FR";
+      }
+
       document.documentElement.lang = "en";
     }
 
     currentLang = lang;
   }
 
-  langToggle.addEventListener("click", () => {
-    setLanguage(currentLang === "fr" ? "en" : "fr");
-  });
+  if (langToggle) {
+    langToggle.addEventListener("click", () => {
+      setLanguage(currentLang === "fr" ? "en" : "fr");
+    });
+  }
 
   setLanguage("fr");
 
@@ -66,7 +80,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   sectionLinks.forEach((link) => {
     link.addEventListener("click", () => {
-      navLinks.classList.remove("open");
+      if (navLinks) {
+        navLinks.classList.remove("open");
+      }
     });
   });
 
@@ -77,7 +93,10 @@ document.addEventListener("DOMContentLoaded", () => {
       const sectionTop = section.offsetTop - 140;
       const sectionHeight = section.offsetHeight;
 
-      if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+      if (
+        window.scrollY >= sectionTop &&
+        window.scrollY < sectionTop + sectionHeight
+      ) {
         currentSectionId = section.getAttribute("id");
       }
     });
@@ -85,12 +104,52 @@ document.addEventListener("DOMContentLoaded", () => {
     sectionLinks.forEach((link) => {
       link.classList.remove("active");
       const href = link.getAttribute("href");
+
       if (href === `#${currentSectionId}`) {
         link.classList.add("active");
       }
     });
   }
 
-  window.addEventListener("scroll", setActiveNav);
+  function updateScrollProgress() {
+    if (!scrollProgress) return;
+
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+
+    scrollProgress.style.width = `${progress}%`;
+  }
+
+  function toggleBackToTop() {
+    if (!backToTop) return;
+
+    if (window.scrollY > 500) {
+      backToTop.classList.add("show");
+    } else {
+      backToTop.classList.remove("show");
+    }
+  }
+
+  if (backToTop) {
+    backToTop.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    });
+  }
+
+  function handleScroll() {
+    setActiveNav();
+    updateScrollProgress();
+    toggleBackToTop();
+  }
+
+  window.addEventListener("scroll", handleScroll);
+  window.addEventListener("resize", setActiveNav);
+
   setActiveNav();
+  updateScrollProgress();
+  toggleBackToTop();
 });
