@@ -1,57 +1,336 @@
-<article class="project-card">
-  <div class="project-visual visual-fintrack">
-    <span>FinTrack</span>
-  </div>
+:root {
+  --bg: #070b14;
+  --bg-2: #0d1322;
+  --panel: rgba(255, 255, 255, 0.08);
+  --panel-strong: rgba(255, 255, 255, 0.12);
+  --text: #f5f7ff;
+  --muted: #b8c0d9;
+  --line: rgba(255, 255, 255, 0.12);
+  --primary: #8b5cf6;
+  --primary-2: #5b7cff;
+  --cyan: #22d3ee;
+  --success: #22c55e;
+  --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+  --shadow-strong: 0 28px 80px rgba(0, 0, 0, 0.5);
+  --radius: 22px;
+  --radius-sm: 16px;
+  --max-width: 1180px;
+}
 
-  <div class="project-top">
-    <span class="project-type">
-      <span data-lang="fr">Projet full-stack</span>
-      <span data-lang="en" style="display:none;">Full-Stack Project</span>
-    </span>
+* {
+  box-sizing: border-box;
+}
 
-    <h3>FinTrack Financial Dashboard</h3>
+html {
+  scroll-behavior: smooth;
+}
 
-    <p>
-      <span data-lang="fr">
-        Application moderne de gestion financière avec authentification sécurisée,
-        tableaux de bord interactifs, rapports analytiques et gestion des transactions.
-      </span>
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top left, rgba(139, 92, 246, 0.2), transparent 30%),
+    radial-gradient(circle at top right, rgba(34, 211, 238, 0.15), transparent 28%),
+    linear-gradient(180deg, #05070d 0%, #0b1020 100%);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
 
-      <span data-lang="en" style="display:none;">
-        Modern financial management application with secure authentication,
-        interactive dashboards, analytics reports, and transaction management.
-      </span>
-    </p>
-  </div>
+a {
+  color: #d8deff;
+  text-decoration: none;
+}
 
-  <div class="impact-line">
-    <span data-lang="fr">
-      React • Node.js • MongoDB • JWT • Analytics Dashboard
-    </span>
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--primary), var(--cyan));
+  z-index: 9999;
+}
 
-    <span data-lang="en" style="display:none;">
-      React • Node.js • MongoDB • JWT • Analytics Dashboard
-    </span>
-  </div>
+.site-header,
+main,
+.site-footer {
+  position: relative;
+  z-index: 1;
+}
 
-  <div class="tags">
-    <span>React</span>
-    <span>Node.js</span>
-    <span>Express</span>
-    <span>MongoDB</span>
-    <span>JWT</span>
-    <span>REST API</span>
-    <span>Charts</span>
-    <span>Azure</span>
-  </div>
+.site-header {
+  padding: 18px 20px 0;
+}
 
-  <div class="project-links">
-    <a
-      href="https://github.com/killua11111010100/fintrack"
-      target="_blank"
-      rel="noopener"
-    >
-      GitHub
-    </a>
-  </div>
-</article>
+.navbar {
+  width: min(var(--max-width), 100%);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 14px 18px;
+  background: rgba(9, 13, 24, 0.7);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(16px);
+}
+
+.brand {
+  font-weight: 800;
+  color: white;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-links a,
+.lang-btn {
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text);
+  transition: 0.25s ease;
+  border: 1px solid transparent;
+  background: transparent;
+  cursor: pointer;
+}
+
+.nav-links a:hover,
+.lang-btn:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+.resume-btn {
+  background: linear-gradient(
+    135deg,
+    rgba(139, 92, 246, 0.28),
+    rgba(91, 124, 255, 0.24)
+  );
+}
+
+main {
+  width: min(var(--max-width), calc(100% - 40px));
+  margin: 28px auto;
+}
+
+.section {
+  padding: 34px;
+  margin-bottom: 22px;
+  border: 1px solid var(--line);
+  border-radius: 30px;
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.09),
+    rgba(255,255,255,0.05)
+  );
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(14px);
+}
+
+.section-heading {
+  margin-bottom: 24px;
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  color: #cfd7ff;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-weight: 700;
+}
+
+.projects-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.project-card {
+  overflow: hidden;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 22px;
+  padding: 22px;
+  transition: 0.25s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(139, 92, 246, 0.35);
+}
+
+.project-visual {
+  height: 150px;
+  border-radius: 18px;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: end;
+  justify-content: start;
+  padding: 18px;
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: white;
+  position: relative;
+}
+
+.visual-api {
+  background:
+    radial-gradient(circle at top right, rgba(34, 211, 238, 0.35), transparent 35%),
+    linear-gradient(135deg, rgba(139, 92, 246, 0.85), rgba(25, 35, 70, 0.95));
+}
+
+.visual-dashboard {
+  background:
+    radial-gradient(circle at bottom right, rgba(34, 211, 238, 0.25), transparent 35%),
+    linear-gradient(135deg, rgba(17, 24, 39, 0.95), rgba(139, 92, 246, 0.7));
+}
+
+.visual-bank {
+  background:
+    radial-gradient(circle at top right, rgba(139, 92, 246, 0.25), transparent 35%),
+    linear-gradient(135deg, rgba(17, 24, 39, 0.95), rgba(31, 41, 55, 0.98));
+}
+
+.visual-fintrack {
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  background:
+    radial-gradient(circle at top right, rgba(34, 211, 238, 0.18), transparent 35%),
+    radial-gradient(circle at bottom left, rgba(139, 92, 246, 0.25), transparent 35%),
+    linear-gradient(
+      135deg,
+      rgba(15, 23, 42, 0.98),
+      rgba(37, 99, 235, 0.88),
+      rgba(124, 58, 237, 0.82)
+    );
+}
+
+.visual-fintrack img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.project-card:hover .visual-fintrack img {
+  transform: scale(1.03);
+}
+
+.visual-fintrack::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      to top,
+      rgba(5, 7, 13, 0.88) 0%,
+      rgba(5, 7, 13, 0.25) 40%,
+      transparent 100%
+    );
+}
+
+.visual-fintrack span {
+  position: absolute;
+  left: 18px;
+  bottom: 18px;
+  z-index: 2;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: white;
+}
+
+.project-top p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.project-type {
+  display: inline-block;
+  margin-bottom: 12px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #dbe2ff;
+  background: rgba(139, 92, 246, 0.14);
+  padding: 8px 10px;
+  border-radius: 999px;
+}
+
+.impact-line {
+  margin: 16px 0 14px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.04);
+  color: #dce4ff;
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tags span {
+  padding: 9px 12px;
+  border-radius: 999px;
+  font-size: 0.86rem;
+  color: #e7ebff;
+  background: rgba(255,255,255,0.07);
+}
+
+.project-links {
+  display: flex;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.project-links a {
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.05);
+  font-weight: 600;
+}
+
+.site-footer {
+  width: min(var(--max-width), calc(100% - 40px));
+  margin: 0 auto 30px;
+  padding: 16px 22px;
+  text-align: center;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(255,255,255,0.05);
+}
+
+@media (max-width: 1080px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding: 22px 18px;
+  }
+}
