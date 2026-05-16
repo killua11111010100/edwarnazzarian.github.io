@@ -880,6 +880,11 @@ main {
     grid-column: auto;
   }
 }
+.visual-fintrack {
+  background:
+    radial-gradient(circle at top right, rgba(37,99,235,0.45), transparent 45%),
+    linear-gradient(135deg, #111827, #1e3a8a, #7c3aed);
+}
 
 @media (prefers-reduced-motion: reduce) {
   html {
