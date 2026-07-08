@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Edwar Nazzarian | Portfolio logiciel</title>
+  <title>Edwar Nazzarian | Portfolio</title>
   <meta
     name="description"
-    content="Portfolio d'Edwar Nazzarian, étudiant en génie logiciel à l'ÉTS: applications web, backend, mobile et interfaces modernes."
+    content="Portfolio d'Edwar Nazzarian, étudiant en génie logiciel à l'ÉTS: développement web, backend, mobile et interfaces modernes."
   />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,18 +14,6 @@
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
     rel="stylesheet"
   />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ["Inter", "system-ui", "sans-serif"],
-          },
-        },
-      },
-    };
-  </script>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -39,18 +27,19 @@
       </a>
 
       <button class="nav-toggle" id="navToggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false">
-        <i data-lucide="menu"></i>
+        <span></span>
+        <span></span>
       </button>
 
       <div class="nav-links" id="navLinks">
         <a href="#about"><span data-lang="fr">Profil</span><span data-lang="en">Profile</span></a>
-        <a href="#skills"><span data-lang="fr">Stack</span><span data-lang="en">Stack</span></a>
+        <a href="#skills"><span data-lang="fr">Compétences</span><span data-lang="en">Skills</span></a>
         <a href="#projects"><span data-lang="fr">Projets</span><span data-lang="en">Projects</span></a>
         <a href="#education"><span data-lang="fr">Parcours</span><span data-lang="en">Education</span></a>
         <a href="#contact">Contact</a>
-        <a class="resume-btn" href="CV_Edwar_Fr.pdf" target="_blank" rel="noopener">
-          <i data-lucide="file-down"></i>
-          <span data-lang="fr">CV</span><span data-lang="en">Resume</span>
+        <a class="resume-btn" href="cv-fr.pdf" target="_blank" rel="noopener">
+          <span class="icon">↓</span>
+          <span>CV</span>
         </a>
         <button id="langToggle" type="button" class="lang-btn">EN</button>
       </div>
@@ -58,162 +47,171 @@
   </header>
 
   <main>
-    <section id="home" class="hero section">
-      <div class="hero-copy reveal">
+    <section id="home" class="hero section reveal">
+      <div class="hero-copy">
         <div class="status-badge">
           <span class="status-dot"></span>
           <span data-lang="fr">Disponible pour un stage en développement logiciel</span>
           <span data-lang="en">Available for a software development internship</span>
         </div>
 
-        <p class="eyebrow">Software Engineering · Montréal</p>
-
+        <p class="eyebrow">Software Engineering · ÉTS · Montréal</p>
         <h1>
-          <span data-lang="fr">Je transforme des idées en interfaces utiles, propres et solides.</span>
-          <span data-lang="en">I turn ideas into useful, clean, and reliable interfaces.</span>
+          <span data-lang="fr">Je construis des applications web claires, rapides et bien structurées.</span>
+          <span data-lang="en">I build clear, fast, and well-structured web applications.</span>
         </h1>
 
         <p class="hero-subtitle">
           <span data-lang="fr">
-            Étudiant en génie logiciel à l'ÉTS, je développe des applications web, des APIs,
-            des tableaux de bord et des expériences mobiles avec une attention forte à la
-            structure, à la clarté et au rendu final.
+            Étudiant en génie logiciel, je crée des interfaces modernes, des APIs et des
+            tableaux de bord avec une attention particulière au détail, à l'expérience
+            utilisateur et à la qualité du code.
           </span>
           <span data-lang="en">
-            Software Engineering student at ÉTS building web apps, APIs, dashboards,
-            and mobile experiences with a strong focus on structure, clarity, and polish.
+            Software engineering student building modern interfaces, APIs, and dashboards
+            with strong attention to detail, user experience, and code quality.
           </span>
         </p>
 
         <div class="hero-actions">
-          <a href="#projects" class="btn btn-primary">
-            <i data-lucide="sparkles"></i>
-            <span data-lang="fr">Explorer les projets</span>
-            <span data-lang="en">Explore projects</span>
-          </a>
-          <a href="mailto:edwarnazzarian75@gmail.com" class="btn btn-secondary">
-            <i data-lucide="send"></i>
-            <span data-lang="fr">Me contacter</span>
-            <span data-lang="en">Contact me</span>
-          </a>
+          <a href="#projects" class="btn btn-primary"><span class="icon">✦</span><span data-lang="fr">Voir mes projets</span><span data-lang="en">View projects</span></a>
+          <a href="mailto:edwarnazzarian75@gmail.com" class="btn btn-secondary"><span class="icon">↗</span><span data-lang="fr">Me contacter</span><span data-lang="en">Contact me</span></a>
         </div>
 
-        <div class="hero-metrics" aria-label="Aperçu rapide">
-          <span><strong>6</strong><small data-lang="fr">écrans projet</small><small data-lang="en">project screens</small></span>
-          <span><strong>FR/EN</strong><small data-lang="fr">bilingue</small><small data-lang="en">bilingual</small></span>
-          <span><strong>ÉTS</strong><small>Montréal</small></span>
+        <div class="hero-stats">
+          <span><strong>Full-stack</strong><small>React · Node · SQL</small></span>
+          <span><strong>Mobile</strong><small>Android · Java</small></span>
+          <span><strong>Dashboard</strong><small>Admin · UX · API</small></span>
         </div>
       </div>
 
-      <div class="hero-stage reveal" aria-label="Visualisation 3D">
-        <canvas id="heroCanvas"></canvas>
-        <div class="stage-caption">
-          <span>React</span>
-          <span>Node.js</span>
-          <span>Java</span>
-          <span>SQL</span>
+      <div class="hero-visual" aria-label="Présentation visuelle">
+        <div class="profile-card">
+          <img
+            src="profile.jpeg"
+            alt="Photo de profil d'Edwar Nazzarian"
+            onerror="this.style.display='none'; this.parentElement.classList.add('profile-missing');"
+          />
+          <div>
+            <strong>Edwar Nazzarian</strong>
+            <span data-lang="fr">Développeur logiciel junior</span>
+            <span data-lang="en">Junior software developer</span>
+          </div>
+        </div>
+
+        <div class="scene-card">
+          <canvas id="heroCanvas" aria-hidden="true"></canvas>
+          <div class="cube-3d" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="scene-tags">
+            <span>Java</span>
+            <span>JavaScript</span>
+            <span>REST API</span>
+            <span>MySQL</span>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section intro-strip reveal" aria-label="Aperçu">
+    <section class="overview reveal" aria-label="Aperçu">
       <article>
-        <i data-lucide="layout-dashboard"></i>
+        <span class="mini-icon">▦</span>
         <h2>Frontend</h2>
-        <p data-lang="fr">Interfaces web responsives, dashboards, composants réutilisables.</p>
-        <p data-lang="en">Responsive web interfaces, dashboards, reusable components.</p>
+        <p data-lang="fr">Interfaces responsives, composants propres, pages lisibles.</p>
+        <p data-lang="en">Responsive interfaces, clean components, readable pages.</p>
       </article>
       <article>
-        <i data-lucide="server-cog"></i>
+        <span class="mini-icon">⌁</span>
         <h2>Backend</h2>
-        <p data-lang="fr">APIs REST, authentification, bases de données, logique métier.</p>
-        <p data-lang="en">REST APIs, authentication, databases, business logic.</p>
+        <p data-lang="fr">APIs REST, authentification, logique métier et données.</p>
+        <p data-lang="en">REST APIs, authentication, business logic, and data.</p>
       </article>
       <article>
-        <i data-lucide="smartphone"></i>
-        <h2>Mobile</h2>
-        <p data-lang="fr">Applications Android, flux de navigation, vues orientées utilisateur.</p>
-        <p data-lang="en">Android apps, navigation flows, user-focused views.</p>
+        <span class="mini-icon">◱</span>
+        <h2>Produit</h2>
+        <p data-lang="fr">Vision utilisateur, détails visuels et workflows complets.</p>
+        <p data-lang="en">User focus, visual detail, and complete workflows.</p>
       </article>
     </section>
 
-    <section id="about" class="section split-section reveal">
+    <section id="about" class="section profile-section reveal">
       <div class="section-heading">
         <p class="eyebrow"><span data-lang="fr">Profil</span><span data-lang="en">Profile</span></p>
         <h2>
-          <span data-lang="fr">Un développeur junior orienté produit et qualité.</span>
-          <span data-lang="en">A junior developer focused on product and quality.</span>
+          <span data-lang="fr">Un développeur junior qui aime livrer du concret.</span>
+          <span data-lang="en">A junior developer who likes shipping real things.</span>
         </h2>
       </div>
-      <div class="about-panel">
+      <div class="profile-grid">
         <p>
           <span data-lang="fr">
-            J'aime construire des solutions qui sont faciles à comprendre, agréables à
-            utiliser et assez bien organisées pour évoluer. Mes projets couvrent le web,
-            le backend, les tableaux de bord administratifs et le mobile.
+            Je suis étudiant en génie logiciel à l'ÉTS. Mes projets montrent ma capacité à
+            créer des interfaces, connecter un backend, organiser des données et penser au
+            parcours utilisateur du début à la fin.
           </span>
           <span data-lang="en">
-            I like building solutions that are easy to understand, pleasant to use, and
-            structured well enough to evolve. My projects cover web, backend, admin dashboards,
-            and mobile.
+            I am a software engineering student at ÉTS. My projects show my ability to build
+            interfaces, connect backend services, organize data, and think through the user
+            journey from end to end.
           </span>
         </p>
         <ul class="check-list">
-          <li><i data-lucide="check"></i><span data-lang="fr">Code structuré et maintenable</span><span data-lang="en">Structured and maintainable code</span></li>
-          <li><i data-lucide="check"></i><span data-lang="fr">Interfaces modernes et responsives</span><span data-lang="en">Modern responsive interfaces</span></li>
-          <li><i data-lucide="check"></i><span data-lang="fr">Bonne compréhension backend/API</span><span data-lang="en">Solid backend/API understanding</span></li>
+          <li><span>✓</span><span data-lang="fr">Code maintenable et structuré</span><span data-lang="en">Maintainable, structured code</span></li>
+          <li><span>✓</span><span data-lang="fr">Interfaces modernes et responsives</span><span data-lang="en">Modern, responsive interfaces</span></li>
+          <li><span>✓</span><span data-lang="fr">Bonne base backend, API et base de données</span><span data-lang="en">Solid backend, API, and database foundation</span></li>
         </ul>
       </div>
     </section>
 
     <section id="skills" class="section reveal">
       <div class="section-heading">
-        <p class="eyebrow"><span data-lang="fr">Stack technique</span><span data-lang="en">Technical stack</span></p>
-        <h2><span data-lang="fr">Outils que j'utilise pour livrer.</span><span data-lang="en">Tools I use to ship.</span></h2>
+        <p class="eyebrow"><span data-lang="fr">Compétences</span><span data-lang="en">Skills</span></p>
+        <h2><span data-lang="fr">Stack technique.</span><span data-lang="en">Technical stack.</span></h2>
       </div>
 
       <div class="skills-grid">
         <article class="skill-card">
-          <i data-lucide="code-2"></i>
+          <span class="mini-icon">⌘</span>
           <h3><span data-lang="fr">Langages</span><span data-lang="en">Languages</span></h3>
           <div class="tags"><span>Java</span><span>JavaScript</span><span>SQL</span><span>C</span><span>PHP</span></div>
         </article>
         <article class="skill-card">
-          <i data-lucide="globe-2"></i>
+          <span class="mini-icon">▣</span>
           <h3>Web</h3>
-          <div class="tags"><span>HTML</span><span>CSS</span><span>React</span><span>Tailwind</span><span>REST</span></div>
+          <div class="tags"><span>HTML</span><span>CSS</span><span>React</span><span>Node.js</span><span>REST</span></div>
         </article>
         <article class="skill-card">
-          <i data-lucide="database"></i>
+          <span class="mini-icon">◎</span>
           <h3>Backend</h3>
-          <div class="tags"><span>Node.js</span><span>Express</span><span>MongoDB</span><span>MySQL</span><span>JWT</span></div>
+          <div class="tags"><span>Express</span><span>MySQL</span><span>MongoDB</span><span>JWT</span><span>Docker</span></div>
         </article>
         <article class="skill-card">
-          <i data-lucide="wrench"></i>
+          <span class="mini-icon">◌</span>
           <h3><span data-lang="fr">Outils</span><span data-lang="en">Tools</span></h3>
-          <div class="tags"><span>Git</span><span>Docker</span><span>VS Code</span><span>IntelliJ</span><span>Android Studio</span></div>
+          <div class="tags"><span>Git</span><span>VS Code</span><span>IntelliJ</span><span>Android Studio</span><span>Power BI</span></div>
         </article>
       </div>
     </section>
 
     <section id="projects" class="section reveal">
-      <div class="section-heading project-heading">
+      <div class="section-heading projects-heading">
         <div>
           <p class="eyebrow"><span data-lang="fr">Projets</span><span data-lang="en">Projects</span></p>
-          <h2><span data-lang="fr">Sélection avec visuels réels.</span><span data-lang="en">Selected work with real visuals.</span></h2>
+          <h2><span data-lang="fr">Projets avec visuels réels.</span><span data-lang="en">Projects with real visuals.</span></h2>
         </div>
-        <a href="https://github.com/killua11111010100" target="_blank" rel="noopener" class="text-link">
-          GitHub <i data-lucide="external-link"></i>
-        </a>
+        <a class="text-link" href="https://github.com/killua11111010100" target="_blank" rel="noopener">GitHub ↗</a>
       </div>
 
-      <article class="featured-project project-card">
-        <div class="project-gallery">
-          <img src="assets/boozy-mobile-home-products.png" alt="Écrans mobile Boozy, accueil et produits" />
-          <img src="assets/boozy-dashboard-home.png" alt="Dashboard gestionnaire Boozy" />
-          <img src="assets/boozy-mobile-profiles.png" alt="Écrans profil client et profil livreur Boozy" />
+      <article class="featured-project">
+        <div class="project-media media-collage">
+          <img src="boozy-mobile-home-products.png" alt="Écrans mobile Boozy accueil et produits" />
+          <img src="boozy-dashboard-home.png" alt="Tableau de bord gestionnaire Boozy" />
+          <img src="boozy-mobile-profiles.png" alt="Profils client et livreur Boozy" />
         </div>
-        <div class="project-content">
+        <div class="project-copy">
           <span class="project-type"><span data-lang="fr">Projet intégrateur</span><span data-lang="en">Capstone project</span></span>
           <h3>Boozy Delivery Platform</h3>
           <p>
@@ -226,78 +224,63 @@
               dashboards, product management, users, and orders.
             </span>
           </p>
-          <div class="impact-line"><span>Mobile UI · Admin dashboard · PHP · MySQL · JavaScript</span></div>
-          <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span><span>MySQL</span></div>
-          <div class="project-links">
-            <a href="https://github.com/killua11111010100/TCH099-Boozy.git" target="_blank" rel="noopener">
-              <i data-lucide="github"></i> GitHub
-            </a>
-          </div>
+          <div class="tags"><span>JavaScript</span><span>PHP</span><span>MySQL</span><span>Mobile UI</span><span>Admin dashboard</span></div>
+          <a class="btn btn-secondary project-button" href="https://github.com/killua11111010100/TCH099-Boozy.git" target="_blank" rel="noopener">GitHub ↗</a>
         </div>
       </article>
 
       <div class="projects-grid">
         <article class="project-card">
-          <img class="project-image" src="assets/boozy-products-admin.png" alt="Interface d'administration des produits Boozy" />
-          <div class="project-content">
+          <img src="boozy-products-admin.png" alt="Gestion des produits SAQ" />
+          <div>
             <span class="project-type">Admin UI</span>
             <h3><span data-lang="fr">Gestion produits SAQ</span><span data-lang="en">SAQ product management</span></h3>
-            <p><span data-lang="fr">Ajout, modification et suppression de produits avec liste administrable.</span><span data-lang="en">Add, edit, and delete products through an admin list.</span></p>
+            <p><span data-lang="fr">Ajout, modification et suppression de produits avec liste administrable.</span><span data-lang="en">Add, edit, and delete products through an admin interface.</span></p>
           </div>
         </article>
+
         <article class="project-card">
-          <img class="project-image" src="assets/boozy-users-admin.png" alt="Interface de gestion des utilisateurs Boozy" />
-          <div class="project-content">
+          <img src="boozy-users-admin.png" alt="Gestion des utilisateurs Boozy" />
+          <div>
             <span class="project-type">Account Flow</span>
             <h3><span data-lang="fr">Gestion utilisateurs</span><span data-lang="en">User management</span></h3>
             <p><span data-lang="fr">Création de comptes et séparation des rôles client, livreur et gestionnaire.</span><span data-lang="en">Account creation with customer, driver, and manager roles.</span></p>
           </div>
         </article>
+
         <article class="project-card">
-          <img class="project-image" src="assets/boozy-orders-admin.png" alt="Tableau des commandes Boozy" />
-          <div class="project-content">
+          <img src="boozy-orders-admin.png" alt="Tableau des commandes Boozy" />
+          <div>
             <span class="project-type">Operations</span>
-            <h3><span data-lang="fr">Tableau des commandes</span><span data-lang="en">Orders table</span></h3>
-            <p><span data-lang="fr">Suivi des commandes, statuts, prix et actions administratives.</span><span data-lang="en">Order tracking with status, price, and admin actions.</span></p>
+            <h3><span data-lang="fr">Tableau des commandes</span><span data-lang="en">Orders dashboard</span></h3>
+            <p><span data-lang="fr">Suivi des commandes, statuts, prix et actions administratives.</span><span data-lang="en">Order tracking with statuses, prices, and admin actions.</span></p>
           </div>
         </article>
-        <article class="project-card synthetic-card">
-          <div class="synthetic-visual">
-            <i data-lucide="wallet-cards"></i>
-            <span>FinTrack</span>
-          </div>
-          <div class="project-content">
-            <span class="project-type">Full-stack</span>
-            <h3>FinTrack</h3>
-            <p><span data-lang="fr">Application de gestion financière avec authentification, transactions et tableaux analytiques.</span><span data-lang="en">Financial app with authentication, transactions, and analytics dashboards.</span></p>
-            <div class="tags"><span>React</span><span>Node.js</span><span>MongoDB</span><span>JWT</span></div>
-            <div class="project-links"><a href="https://github.com/killua11111010100/fintrack" target="_blank" rel="noopener"><i data-lucide="github"></i> GitHub</a></div>
-          </div>
+
+        <article class="project-card project-card-text">
+          <span class="mini-icon">▥</span>
+          <span class="project-type">Full-stack</span>
+          <h3>FinTrack</h3>
+          <p><span data-lang="fr">Application de gestion financière avec authentification, transactions et tableaux analytiques.</span><span data-lang="en">Financial app with authentication, transactions, and analytics dashboards.</span></p>
+          <div class="tags"><span>React</span><span>Node.js</span><span>MongoDB</span><span>JWT</span></div>
+          <a href="https://github.com/killua11111010100/fintrack" target="_blank" rel="noopener">GitHub ↗</a>
         </article>
-        <article class="project-card synthetic-card">
-          <div class="synthetic-visual api-visual">
-            <i data-lucide="shield-check"></i>
-            <span>Secure API</span>
-          </div>
-          <div class="project-content">
-            <span class="project-type">Backend</span>
-            <h3>Secure API Platform</h3>
-            <p><span data-lang="fr">API REST sécurisée avec JWT, contrôle d'accès, PostgreSQL et déploiement conteneurisé.</span><span data-lang="en">Secure REST API with JWT, access control, PostgreSQL, and containerized deployment.</span></p>
-            <div class="tags"><span>Express</span><span>PostgreSQL</span><span>Docker</span><span>JWT</span></div>
-            <div class="project-links"><a href="https://github.com/killua11111010100/secure-api-platform" target="_blank" rel="noopener"><i data-lucide="github"></i> GitHub</a></div>
-          </div>
+
+        <article class="project-card project-card-text">
+          <span class="mini-icon">◈</span>
+          <span class="project-type">Backend</span>
+          <h3>Secure API Platform</h3>
+          <p><span data-lang="fr">API REST sécurisée avec JWT, contrôle d'accès, PostgreSQL et déploiement conteneurisé.</span><span data-lang="en">Secure REST API with JWT, access control, PostgreSQL, and containerized deployment.</span></p>
+          <div class="tags"><span>Express</span><span>PostgreSQL</span><span>Docker</span><span>JWT</span></div>
+          <a href="https://github.com/killua11111010100/secure-api-platform" target="_blank" rel="noopener">GitHub ↗</a>
         </article>
-        <article class="project-card synthetic-card">
-          <div class="synthetic-visual java-visual">
-            <i data-lucide="landmark"></i>
-            <span>Java MVC</span>
-          </div>
-          <div class="project-content">
-            <span class="project-type"><span data-lang="fr">Académique</span><span data-lang="en">Academic</span></span>
-            <h3><span data-lang="fr">Application bancaire</span><span data-lang="en">Banking application</span></h3>
-            <p><span data-lang="fr">Application Java Swing en MVC pour comptes, transactions et séparation de responsabilités.</span><span data-lang="en">Java Swing MVC app for accounts, transactions, and separated responsibilities.</span></p>
-            <div class="tags"><span>Java</span><span>Swing</span><span>MVC</span><span>Observer</span></div>
-          </div>
+
+        <article class="project-card project-card-text">
+          <span class="mini-icon">◫</span>
+          <span class="project-type"><span data-lang="fr">Académique</span><span data-lang="en">Academic</span></span>
+          <h3><span data-lang="fr">Application bancaire</span><span data-lang="en">Banking application</span></h3>
+          <p><span data-lang="fr">Application Java Swing en MVC pour comptes, transactions et séparation de responsabilités.</span><span data-lang="en">Java Swing MVC application for accounts, transactions, and separated responsibilities.</span></p>
+          <div class="tags"><span>Java</span><span>Swing</span><span>MVC</span><span>Observer</span></div>
         </article>
       </div>
     </section>
@@ -307,14 +290,15 @@
         <p class="eyebrow"><span data-lang="fr">Parcours</span><span data-lang="en">Education</span></p>
         <h2><span data-lang="fr">Formation actuelle.</span><span data-lang="en">Current education.</span></h2>
       </div>
+
       <div class="timeline">
-        <article class="timeline-item">
-          <span class="timeline-date">2025 - <span data-lang="fr">présent</span><span data-lang="en">present</span></span>
+        <article>
+          <span>2025 - <span data-lang="fr">présent</span><span data-lang="en">present</span></span>
           <h3><span data-lang="fr">Baccalauréat en génie logiciel</span><span data-lang="en">Bachelor's in Software Engineering</span></h3>
           <p>École de technologie supérieure (ÉTS), Montréal</p>
         </article>
-        <article class="timeline-item">
-          <span class="timeline-date">2024 - 2025</span>
+        <article>
+          <span>2024 - 2025</span>
           <h3><span data-lang="fr">Cheminement universitaire en technologie</span><span data-lang="en">University Pathway in Technology</span></h3>
           <p>École de technologie supérieure (ÉTS), Montréal</p>
         </article>
@@ -326,31 +310,19 @@
         <p class="eyebrow">Contact</p>
         <h2><span data-lang="fr">Discutons d'un stage ou d'un projet.</span><span data-lang="en">Let's talk about an internship or project.</span></h2>
       </div>
-      <div class="contact-actions">
-        <a href="mailto:edwarnazzarian75@gmail.com" class="contact-card">
-          <i data-lucide="mail"></i>
-          <span>edwarnazzarian75@gmail.com</span>
-        </a>
-        <a href="https://www.linkedin.com/in/edwar-nazzarian/" target="_blank" rel="noopener" class="contact-card">
-          <i data-lucide="linkedin"></i>
-          <span>LinkedIn</span>
-        </a>
-        <a href="https://github.com/killua11111010100" target="_blank" rel="noopener" class="contact-card">
-          <i data-lucide="github"></i>
-          <span>GitHub</span>
-        </a>
+      <div class="contact-links">
+        <a href="mailto:edwarnazzarian75@gmail.com">edwarnazzarian75@gmail.com</a>
+        <a href="https://www.linkedin.com/in/edwar-nazzarian/" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a href="https://github.com/killua11111010100" target="_blank" rel="noopener">GitHub ↗</a>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <p>© 2026 Edwar Nazzarian</p>
-    <button class="back-to-top" id="backToTop" type="button" aria-label="Retour en haut">
-      <i data-lucide="arrow-up"></i>
-    </button>
   </footer>
 
-  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
-  <script type="module" src="script.js"></script>
+  <button class="back-to-top" id="backToTop" type="button" aria-label="Retour en haut">↑</button>
+  <script src="script.js"></script>
 </body>
 </html>
