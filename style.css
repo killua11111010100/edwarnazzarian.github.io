@@ -1990,4 +1990,20 @@ section[id] {
     break-inside: avoid;
     box-shadow: none;
   }
+  .gallery-category {
+  margin-top: 2rem;
+}
+
+.gallery-category + .gallery-category {
+  margin-top: 3rem;
+}
+
+.gallery-category-title {
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
 }
