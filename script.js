@@ -1,266 +1,198 @@
+/* Attendre que le HTML soit chargé avant d'initialiser les interactions. */
 document.addEventListener("DOMContentLoaded", () => {
-  const EMAIL = "edwarnazzarian75@gmail.com";
+  /* Références aux éléments utilisés par les fonctionnalités du portfolio. */
   const root = document.documentElement;
-  const menuToggle = document.getElementById("menuToggle");
-  const menuPanel = document.getElementById("primary-navigation");
-  const menuScrim = document.getElementById("menuScrim");
-  const themeToggle = document.getElementById("themeToggle");
-  const scrollProgress = document.getElementById("scrollProgress");
-  const backToTop = document.getElementById("backToTop");
-  const copyEmailButton = document.getElementById("copyEmail");
-  const copyStatus = document.getElementById("copyStatus");
+  const languageButtons = [...document.querySelectorAll("[data-language]")];
   const lightbox = document.getElementById("lightbox");
-  const lightboxPanel = lightbox?.querySelector(".lightbox-panel");
-  const lightboxClose = document.getElementById("lightboxClose");
   const lightboxImage = document.getElementById("lightboxImage");
   const lightboxCaption = document.getElementById("lightboxCaption");
-  const languageButtons = document.querySelectorAll("[data-language]");
-  const sectionLinks = document.querySelectorAll("[data-section-link]");
-  const sections = document.querySelectorAll("main section[id]");
-  const lightboxTriggers = document.querySelectorAll("[data-lightbox-src]");
+  const lightboxClose = document.getElementById("lightboxClose");
+  const character = document.getElementById("heroCharacter");
+  const auraTrigger = document.getElementById("auraTrigger");
+  const progress = document.getElementById("scrollLine");
+  const header = document.querySelector(".site-header");
+  const navLinks = [...document.querySelectorAll('.nav-pill a[href^="#"]')];
+  const asta = document.querySelector(".contact-character");
+  let language = "fr";
+  try {
+    language = localStorage.getItem("portfolio-language") || "fr";
+  } catch {}
 
-  let currentLanguage = readPreference("portfolio-language", "fr");
-  let currentTheme = readPreference("portfolio-theme", "dark");
-  let activeLightboxTrigger = null;
-  let scrollFrame = 0;
-
-  function readPreference(key, fallback) {
-    try {
-      const value = window.localStorage.getItem(key);
-      return value || fallback;
-    } catch {
-      return fallback;
-    }
-  }
-
-  function savePreference(key, value) {
-    try {
-      window.localStorage.setItem(key, value);
-    } catch {
-      // The portfolio still works when browser storage is unavailable.
-    }
-  }
-
-  function localizedValue(element, key) {
-    if (!element) return "";
-    return element.dataset[`${key}${currentLanguage === "fr" ? "Fr" : "En"}`] || "";
-  }
-
-  function setLanguage(language) {
-    currentLanguage = language === "en" ? "en" : "fr";
-    root.lang = currentLanguage;
-
-    document.querySelectorAll("[data-lang]").forEach((element) => {
-      element.hidden = element.dataset.lang !== currentLanguage;
+  /* Afficher la langue choisie et mémoriser la préférence du visiteur. */
+  function setLanguage(next) {
+    language = next === "en" ? "en" : "fr";
+    root.lang = language;
+    document.querySelectorAll("[data-lang]").forEach((el) => {
+      el.hidden = el.dataset.lang !== language;
     });
-
-    languageButtons.forEach((button) => {
-      const active = button.dataset.language === currentLanguage;
-      button.classList.toggle("is-active", active);
-      button.setAttribute("aria-pressed", String(active));
-    });
-
-    document.querySelectorAll("[data-label-fr][data-label-en]").forEach((element) => {
-      element.setAttribute("aria-label", localizedValue(element, "label"));
-    });
-
-    document.querySelectorAll("img[data-alt-fr][data-alt-en]").forEach((image) => {
-      image.alt = localizedValue(image, "alt");
-    });
-
-    lightboxTriggers.forEach((trigger) => {
-      const action = currentLanguage === "fr" ? "Agrandir la capture" : "Enlarge screenshot";
-      trigger.setAttribute("aria-label", `${action} — ${localizedValue(trigger, "caption")}`);
-    });
-
-    document.title = currentLanguage === "fr"
-      ? "Edwar Nazzarian — Développeur logiciel Full-Stack"
-      : "Edwar Nazzarian — Full-Stack Software Developer";
-
-    savePreference("portfolio-language", currentLanguage);
-    closeMenu(false);
-  }
-
-  function setTheme(theme) {
-    currentTheme = theme === "light" ? "light" : "dark";
-    root.dataset.theme = currentTheme;
-    const icon = themeToggle?.querySelector("span");
-    if (icon) icon.textContent = currentTheme === "dark" ? "☼" : "◐";
-
-    const themeColor = document.querySelector('meta[name="theme-color"]');
-    themeColor?.setAttribute("content", currentTheme === "dark" ? "#07100f" : "#f2f1e9");
-    savePreference("portfolio-theme", currentTheme);
-  }
-
-  function setMenu(open) {
-    if (!menuToggle || !menuPanel || !menuScrim) return;
-    menuToggle.setAttribute("aria-expanded", String(open));
-    menuPanel.classList.toggle("is-open", open);
-    menuScrim.classList.toggle("is-open", open);
-    menuToggle.setAttribute(
-      "aria-label",
-      open
-        ? currentLanguage === "fr" ? "Fermer le menu" : "Close menu"
-        : currentLanguage === "fr" ? "Ouvrir le menu" : "Open menu",
+    languageButtons.forEach((button) =>
+      button.classList.toggle(
+        "is-active",
+        button.dataset.language === language,
+      ),
     );
+    if (auraTrigger)
+      auraTrigger.setAttribute(
+        "aria-label",
+        language === "fr"
+          ? auraTrigger.dataset.labelFr
+          : auraTrigger.dataset.labelEn,
+      );
+    document.title =
+      language === "fr"
+        ? "Edwar Nazzarian — Développeur logiciel"
+        : "Edwar Nazzarian — Software Developer";
+    try {
+      localStorage.setItem("portfolio-language", language);
+    } catch {}
   }
 
-  function closeMenu(returnFocus = false) {
-    const wasOpen = menuToggle?.getAttribute("aria-expanded") === "true";
-    setMenu(false);
-    if (returnFocus && wasOpen) menuToggle?.focus();
-  }
+  /* Gestion du changement de langue. */
+  languageButtons.forEach((button) =>
+    button.addEventListener("click", () =>
+      setLanguage(button.dataset.language),
+    ),
+  );
+  setLanguage(language);
 
-  function updateScrollState() {
-    window.cancelAnimationFrame(scrollFrame);
-    scrollFrame = window.requestAnimationFrame(() => {
-      const availableHeight = root.scrollHeight - window.innerHeight;
-      const progress = availableHeight > 0 ? (window.scrollY / availableHeight) * 100 : 0;
-      if (scrollProgress) scrollProgress.style.width = `${progress}%`;
-      backToTop?.classList.toggle("is-visible", window.scrollY > 650);
-    });
-  }
+  /* Animations d'apparition déclenchées lorsque les éléments entrent dans la fenêtre. */
+  const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if ("IntersectionObserver" in window && !reduced) {
+    root.classList.add("reveal-ready");
+    const observer = new IntersectionObserver(
+      (entries) =>
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        }),
+      { threshold: 0.12 },
+    );
+    document
+      .querySelectorAll("[data-reveal]")
+      .forEach((el) => observer.observe(el));
+  } else
+    document
+      .querySelectorAll("[data-reveal]")
+      .forEach((el) => el.classList.add("is-visible"));
 
-  function openLightbox(trigger) {
-    if (!lightbox || !lightboxImage || !lightboxCaption) return;
-    activeLightboxTrigger = trigger;
-    lightboxImage.src = trigger.dataset.lightboxSrc || "";
-    lightboxImage.alt = localizedValue(trigger, "alt");
-    lightboxCaption.textContent = localizedValue(trigger, "caption");
-    lightbox.hidden = false;
-    document.body.style.overflow = "hidden";
-    window.setTimeout(() => lightboxClose?.focus(), 0);
+  /* Préparer les transitions et le suivi de la section active. */
+  const scenes = [...document.querySelectorAll("main > section")];
+  scenes.forEach((scene) => {
+    scene.classList.add("scroll-scene");
+    const sweep = document.createElement("span");
+    sweep.className = "scene-transition";
+    sweep.setAttribute("aria-hidden", "true");
+    scene.prepend(sweep);
+  });
+  if (scenes.length) {
+    root.classList.add("scene-ready");
+    scenes[0].classList.add("is-scene-active");
   }
+  if ("IntersectionObserver" in window && !reduced) {
+    const sceneObserver = new IntersectionObserver(
+      (entries) =>
+        entries.forEach((entry) => {
+          entry.target.classList.toggle(
+            "is-scene-active",
+            entry.isIntersecting,
+          );
+          if (entry.isIntersecting) {
+            const activeLink = navLinks.find(
+              (link) => link.getAttribute("href") === `#${entry.target.id}`,
+            );
+            if (activeLink)
+              navLinks.forEach((link) =>
+                link.classList.toggle("is-current", link === activeLink),
+              );
+          }
+        }),
+      { threshold: 0.08, rootMargin: "-6% 0px -8%" },
+    );
+    scenes.forEach((scene) => sceneObserver.observe(scene));
+  } else scenes.forEach((scene) => scene.classList.add("is-scene-active"));
 
+  /* Donner un léger mouvement à l'illustration principale sur grand écran. */
+  document.addEventListener("pointermove", (event) => {
+    if (!character || reduced || innerWidth < 800) return;
+    const x = (event.clientX / innerWidth - 0.5) * -12;
+    const y = (event.clientY / innerHeight - 0.5) * -9;
+    character.style.transform = `translate3d(${x}px,${y}px,0) rotateY(${x * 0.3}deg)`;
+  });
+
+  /* Déclencher temporairement l'aura du personnage du hero. */
+  let auraTimer = 0;
+  auraTrigger?.addEventListener("click", () => {
+    window.clearTimeout(auraTimer);
+    character.classList.remove("is-awakened");
+    auraTrigger.classList.remove("is-active");
+    void character.offsetWidth;
+    character.classList.add("is-awakened");
+    auraTrigger.classList.add("is-active");
+    auraTimer = window.setTimeout(() => {
+      character.classList.remove("is-awakened");
+      auraTrigger.classList.remove("is-active");
+    }, 2700);
+  });
+
+  /* Mettre à jour la barre de progression et l'état visuel de l'en-tête. */
+  function updateProgress() {
+    const height = document.documentElement.scrollHeight - innerHeight;
+    if (progress)
+      progress.style.width = `${height > 0 ? (scrollY / height) * 100 : 0}%`;
+    header?.classList.toggle("is-scrolled", scrollY > 56);
+  }
+  addEventListener("scroll", updateProgress, { passive: true });
+  addEventListener("resize", updateProgress);
+  updateProgress();
+
+  /* Déclencher temporairement l'animation du personnage de contact. */
+  let astaTimer = 0;
+  asta?.addEventListener("click", () => {
+    window.clearTimeout(astaTimer);
+    asta.classList.remove("is-unleashed");
+    void asta.offsetWidth;
+    asta.classList.add("is-unleashed");
+    astaTimer = window.setTimeout(
+      () => asta.classList.remove("is-unleashed"),
+      2200,
+    );
+  });
+
+  /* Ouvrir les aperçus d'images dans la lightbox. */
+  document.querySelectorAll("[data-lightbox-src]").forEach((trigger) =>
+    trigger.addEventListener("click", () => {
+      if (!lightbox || !lightboxImage || !lightboxCaption) return;
+      lightboxImage.src = trigger.dataset.lightboxSrc;
+      lightboxImage.alt = trigger.querySelector("img")?.alt || "";
+      lightboxCaption.textContent =
+        language === "fr"
+          ? trigger.dataset.captionFr
+          : trigger.dataset.captionEn;
+      lightbox.hidden = false;
+      document.body.style.overflow = "hidden";
+      lightboxClose?.focus();
+    }),
+  );
+  /* Fermer la lightbox et restaurer le défilement de la page. */
   function closeLightbox() {
-    if (!lightbox || lightbox.hidden) return;
+    if (!lightbox) return;
     lightbox.hidden = true;
     document.body.style.removeProperty("overflow");
     if (lightboxImage) lightboxImage.src = "";
-    activeLightboxTrigger?.focus();
-    activeLightboxTrigger = null;
   }
-
-  async function copyEmail() {
-    let success = false;
-
-    try {
-      await navigator.clipboard.writeText(EMAIL);
-      success = true;
-    } catch {
-      const temporaryInput = document.createElement("textarea");
-      temporaryInput.value = EMAIL;
-      temporaryInput.setAttribute("readonly", "");
-      temporaryInput.style.position = "fixed";
-      temporaryInput.style.opacity = "0";
-      document.body.appendChild(temporaryInput);
-      temporaryInput.select();
-      success = document.execCommand("copy");
-      temporaryInput.remove();
-    }
-
-    if (!success) {
-      window.location.href = `mailto:${EMAIL}`;
-      return;
-    }
-
-    const defaultLabel = copyEmailButton?.querySelector("[data-copy-default]");
-    const successLabel = copyEmailButton?.querySelector("[data-copy-success]");
-    const icon = copyEmailButton?.querySelector("[data-copy-icon]");
-    if (defaultLabel) defaultLabel.hidden = true;
-    if (successLabel) successLabel.hidden = false;
-    if (icon) icon.textContent = "✓";
-    if (copyStatus) copyStatus.textContent = currentLanguage === "fr" ? "Courriel copié" : "Email copied";
-
-    window.setTimeout(() => {
-      if (defaultLabel) defaultLabel.hidden = false;
-      if (successLabel) successLabel.hidden = true;
-      if (icon) icon.textContent = "□";
-      if (copyStatus) copyStatus.textContent = "";
-    }, 2200);
-  }
-
-  languageButtons.forEach((button) => {
-    button.addEventListener("click", () => setLanguage(button.dataset.language));
-  });
-
-  themeToggle?.addEventListener("click", () => {
-    setTheme(currentTheme === "dark" ? "light" : "dark");
-  });
-
-  menuToggle?.addEventListener("click", () => {
-    setMenu(menuToggle.getAttribute("aria-expanded") !== "true");
-  });
-  menuScrim?.addEventListener("click", () => closeMenu(true));
-  sectionLinks.forEach((link) => link.addEventListener("click", () => closeMenu(false)));
-
-  backToTop?.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
-
-  copyEmailButton?.addEventListener("click", copyEmail);
-  lightboxTriggers.forEach((trigger) => trigger.addEventListener("click", () => openLightbox(trigger)));
   lightboxClose?.addEventListener("click", closeLightbox);
-  lightbox?.addEventListener("mousedown", closeLightbox);
-  lightboxPanel?.addEventListener("mousedown", (event) => event.stopPropagation());
-
-  window.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") {
-      if (lightbox && !lightbox.hidden) closeLightbox();
-      else closeMenu(true);
-    }
-
-    if (event.key === "Tab" && lightbox && !lightbox.hidden) {
-      event.preventDefault();
-      lightboxClose?.focus();
-    }
+  lightbox?.addEventListener("click", (event) => {
+    if (event.target === lightbox) closeLightbox();
   });
-
-  window.addEventListener("scroll", updateScrollState, { passive: true });
-  window.addEventListener("resize", updateScrollState);
-
-  if ("IntersectionObserver" in window) {
-    const activeObserver = new IntersectionObserver(
-      (entries) => {
-        const visible = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-        if (!visible) return;
-
-        sectionLinks.forEach((link) => {
-          const active = link.dataset.sectionLink === visible.target.id;
-          if (active) link.setAttribute("aria-current", "location");
-          else link.removeAttribute("aria-current");
-        });
-      },
-      { rootMargin: "-30% 0px -58%", threshold: [0, 0.2, 0.55] },
+  addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closeLightbox();
+  });
+  /* Revenir au début de la page depuis le pied de page. */
+  document
+    .getElementById("backToTop")
+    ?.addEventListener("click", () =>
+      scrollTo({ top: 0, behavior: reduced ? "auto" : "smooth" }),
     );
-    sections.forEach((section) => activeObserver.observe(section));
-
-    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const revealElements = document.querySelectorAll("[data-reveal]");
-    if (reducedMotion) {
-      revealElements.forEach((element) => element.classList.add("is-visible"));
-    } else {
-      root.classList.add("reveal-ready");
-      const revealObserver = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (!entry.isIntersecting) return;
-            entry.target.classList.add("is-visible");
-            revealObserver.unobserve(entry.target);
-          });
-        },
-        { threshold: 0.12 },
-      );
-      revealElements.forEach((element) => revealObserver.observe(element));
-    }
-  } else {
-    document.querySelectorAll("[data-reveal]").forEach((element) => element.classList.add("is-visible"));
-  }
-
-  setTheme(currentTheme);
-  setLanguage(currentLanguage);
-  setMenu(false);
-  updateScrollState();
 });
