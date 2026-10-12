@@ -5,14 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#f2eee5" />
     <title>Edwar Nazzarian — Software Developer</title>
-    <meta name="description" content="Portfolio bilingue d’Edwar Nazzarian, développeur logiciel à Montréal. Backend, Full-Stack, API REST et données." />
+    <meta
+      name="description"
+      content="Portfolio bilingue d’Edwar Nazzarian, développeur logiciel à Montréal. Backend, Full-Stack, API REST et données."
+    />
     <meta name="author" content="Edwar Nazzarian" />
     <link rel="canonical" href="https://killua11111010100.github.io/edwarnazzarian.github.io/" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="fr_CA" />
     <meta property="og:locale:alternate" content="en_CA" />
     <meta property="og:title" content="Edwar Nazzarian — Software Developer" />
-    <meta property="og:description" content="I build useful, reliable software — from backend systems to polished interfaces." />
+    <meta
+      property="og:description"
+      content="I build useful, reliable software — from backend systems to polished interfaces."
+    />
     <meta property="og:image" content="https://killua11111010100.github.io/edwarnazzarian.github.io/og.png?v=8" />
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
@@ -20,242 +26,718 @@
     <meta property="og:image:alt" content="Edwar Nazzarian, Software Developer — Backend, Full-Stack et Data" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Edwar Nazzarian — Software Developer" />
-    <meta name="twitter:description" content="I build useful, reliable software — from backend systems to polished interfaces." />
+    <meta
+      name="twitter:description"
+      content="I build useful, reliable software — from backend systems to polished interfaces."
+    />
     <meta name="twitter:image" content="https://killua11111010100.github.io/edwarnazzarian.github.io/og.png?v=8" />
     <meta name="twitter:image:alt" content="Edwar Nazzarian, Software Developer — Backend, Full-Stack et Data" />
     <link rel="preload" href="./joyboy-hero.png" as="image" />
     <link rel="stylesheet" href="./style.css" />
     <script src="./script.js" defer></script>
     <script type="application/ld+json">
-      {"@context":"https://schema.org","@type":"Person","name":"Edwar Nazzarian","jobTitle":"Software Engineering Student","email":"mailto:edwarnazarian75@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Laval","addressRegion":"QC"},"affiliation":{"@type":"CollegeOrUniversity","name":"École de technologie supérieure"},"sameAs":["https://github.com/killua11111010100","https://www.linkedin.com/in/edwar-nazzarian/"],"knowsAbout":["TypeScript","Node.js","REST APIs","React","SQL","Software Engineering"]}
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Edwar Nazzarian",
+        "jobTitle": "Software Engineering Student",
+        "email": "mailto:edwarnazarian75@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Laval",
+          "addressRegion": "QC"
+        },
+        "affiliation": {
+          "@type": "CollegeOrUniversity",
+          "name": "École de technologie supérieure"
+        },
+        "sameAs": ["https://github.com/killua11111010100", "https://www.linkedin.com/in/edwar-nazzarian/"],
+        "knowsAbout": ["TypeScript", "Node.js", "REST APIs", "React", "SQL", "Software Engineering"]
+      }
     </script>
   </head>
   <body>
+    <!-- Décor de page, indicateur de défilement et lien d’accès rapide -->
     <div class="page-noise" aria-hidden="true"></div>
     <div class="scroll-line" id="scrollLine" aria-hidden="true"></div>
-    <a class="skip-link" href="#main"><span data-lang="fr">Aller au contenu</span><span data-lang="en" hidden>Skip to content</span></a>
+    <a class="skip-link" href="#main"
+      ><span data-lang="fr">Aller au contenu</span><span data-lang="en" hidden>Skip to content</span></a
+    >
 
+    <!-- Navigation principale et commandes de langue -->
     <header class="site-header">
       <a class="wordmark" href="#home" aria-label="Edwar Nazzarian — accueil">
         <span class="wordmark-symbol" aria-hidden="true">E</span><strong>EDWAR</strong><small>NAZZARIAN</small>
       </a>
       <nav class="nav-pill" aria-label="Navigation principale">
-        <a class="anime-nav anime-nav-about" href="#about"><span class="nav-mascot" aria-hidden="true"><img src="./anime-nav-about.png" alt="" /><i class="nav-gesture-spark"></i></span><span data-lang="fr">À propos</span><span data-lang="en" hidden>About</span></a>
-        <a class="anime-nav anime-nav-projects" href="#projects"><span class="nav-mascot" aria-hidden="true"><img src="./anime-nav-projects.png" alt="" /><i class="nav-laptop-light"></i></span><span data-lang="fr">Projets</span><span data-lang="en" hidden>Projects</span></a>
-        <a class="anime-nav anime-nav-contact" href="#contact"><span class="nav-mascot" aria-hidden="true"><img src="./anime-nav-contact.png" alt="" /><i class="nav-envelope"><b></b></i></span><span>Contact</span></a>
+        <a class="anime-nav anime-nav-about" href="#about"
+          ><span class="nav-mascot" aria-hidden="true"
+            ><img src="./anime-nav-about.png" alt="" /><i class="nav-gesture-spark"></i></span
+          ><span data-lang="fr">À propos</span><span data-lang="en" hidden>About</span></a
+        >
+        <a class="anime-nav anime-nav-projects" href="#projects"
+          ><span class="nav-mascot" aria-hidden="true"
+            ><img src="./anime-nav-projects.png" alt="" /><i class="nav-laptop-light"></i></span
+          ><span data-lang="fr">Projets</span><span data-lang="en" hidden>Projects</span></a
+        >
+        <a class="anime-nav anime-nav-contact" href="#contact"
+          ><span class="nav-mascot" aria-hidden="true"
+            ><img src="./anime-nav-contact.png" alt="" /><i class="nav-envelope"><b></b></i></span
+          ><span>Contact</span></a
+        >
       </nav>
       <div class="header-actions">
         <div class="lang-switch" aria-label="Langue">
           <button type="button" data-language="fr" class="is-active">FR</button>
           <button type="button" data-language="en">EN</button>
         </div>
-        <a class="contact-chip writing-chip" href="mailto:edwarnazarian75@gmail.com"><span class="writing-pen" aria-hidden="true"><i></i></span><span data-lang="fr">Écrivez-moi</span><span data-lang="en" hidden>Get in touch</span><span>↗</span></a>
+        <a class="contact-chip writing-chip" href="mailto:edwarnazarian75@gmail.com"
+          ><span class="writing-pen" aria-hidden="true"><i></i></span><span data-lang="fr">Écrivez-moi</span
+          ><span data-lang="en" hidden>Get in touch</span><span>↗</span></a
+        >
       </div>
     </header>
 
+    <!-- Contenu principal du portfolio -->
     <main id="main">
+      <!-- Présentation et accès rapide aux projets -->
       <section class="hero" id="home">
         <div class="hero-orbit orbit-one" aria-hidden="true"></div>
         <div class="hero-orbit orbit-two" aria-hidden="true"></div>
         <div class="hero-copy" data-reveal>
-          <p class="kicker"><span class="live-dot"></span><span data-lang="fr">Disponible pour un stage</span><span data-lang="en" hidden>Available for an internship</span></p>
-          <h1><span class="hero-first-name">Edwar<span class="anime-self" tabindex="0" aria-label="Portrait anime interactif d’Edwar"><img class="anime-self-profile" src="./edwar-anime-profile.png" alt="Portrait anime d’Edwar regardant sur le côté" /><img class="anime-self-front" src="./edwar-anime-front.png" alt="Portrait anime d’Edwar regardant vers l’avant" /></span></span><span>Nazzarian</span></h1>
+          <p class="kicker">
+            <span class="live-dot"></span><span data-lang="fr">Disponible pour un stage</span
+            ><span data-lang="en" hidden>Available for an internship</span>
+          </p>
+          <h1>
+            <span class="hero-first-name"
+              >Edwar<span class="anime-self" tabindex="0" aria-label="Portrait anime interactif d’Edwar"
+                ><img
+                  class="anime-self-profile"
+                  src="./edwar-anime-profile.png"
+                  alt="Portrait anime d’Edwar regardant sur le côté" /><img
+                  class="anime-self-front"
+                  src="./edwar-anime-front.png"
+                  alt="Portrait anime d’Edwar regardant vers l’avant" /></span></span
+            ><span>Nazzarian</span>
+          </h1>
           <div class="role-stamp"><span>SOFTWARE</span><strong>DEVELOPER</strong></div>
           <p class="hero-intro">
-            <span data-lang="fr">Je transforme des problèmes complexes en expériences numériques simples, fiables et mémorables.</span>
-            <span data-lang="en" hidden>I turn complex problems into digital experiences that feel simple, reliable and memorable.</span>
+            <span data-lang="fr"
+              >Je transforme des problèmes complexes en expériences numériques simples, fiables et mémorables.</span
+            >
+            <span data-lang="en" hidden
+              >I turn complex problems into digital experiences that feel simple, reliable and memorable.</span
+            >
           </p>
         </div>
 
-        <div class="hero-character" id="heroCharacter" role="button" tabindex="0" aria-label="Libérer l’aura de Joy Boy" data-label-fr="Libérer l’aura de Joy Boy" data-label-en="Unleash Joy Boy's aura">
+        <div
+          class="hero-character"
+          id="heroCharacter"
+          role="button"
+          tabindex="0"
+          aria-label="Libérer l’aura de Joy Boy"
+          data-label-fr="Libérer l’aura de Joy Boy"
+          data-label-en="Unleash Joy Boy's aura"
+        >
           <span class="hero-aura aura-one" aria-hidden="true"></span>
           <span class="hero-aura aura-two" aria-hidden="true"></span>
           <span class="hero-aura aura-three" aria-hidden="true"></span>
           <div class="sun-disc" aria-hidden="true"></div>
-          <img src="./joyboy-hero.png" alt="Illustration 3D de Joy Boy, symbole d’aventure et de créativité" width="900" height="1350" />
+          <img
+            src="./joyboy-hero.png"
+            alt="Illustration 3D de Joy Boy, symbole d’aventure et de créativité"
+            width="900"
+            height="1350"
+          />
           <div class="floating-tag tag-code"><span>01</span> BUILD</div>
           <div class="floating-tag tag-create"><span>02</span> CREATE</div>
         </div>
 
-        <button class="aura-trigger" id="auraTrigger" type="button" aria-label="Libérer l’aura de Joy Boy" data-label-fr="Libérer l’aura de Joy Boy" data-label-en="Unleash Joy Boy's aura">
-          <span aria-hidden="true">⚡</span><span data-lang="fr">Libérer l’aura</span><span data-lang="en" hidden>Unleash aura</span>
+        <button
+          class="aura-trigger"
+          id="auraTrigger"
+          type="button"
+          aria-label="Libérer l’aura de Joy Boy"
+          data-label-fr="Libérer l’aura de Joy Boy"
+          data-label-en="Unleash Joy Boy's aura"
+        >
+          <span aria-hidden="true">⚡</span><span data-lang="fr">Libérer l’aura</span
+          ><span data-lang="en" hidden>Unleash aura</span>
         </button>
 
         <div class="hero-meta" data-reveal>
-          <p><strong>01</strong><span data-lang="fr">Basé à Laval / Montréal</span><span data-lang="en" hidden>Based in Laval / Montreal</span></p>
+          <p>
+            <strong>01</strong><span data-lang="fr">Basé à Laval / Montréal</span
+            ><span data-lang="en" hidden>Based in Laval / Montreal</span>
+          </p>
           <p><strong>02</strong>Backend · Full-Stack · Data</p>
-          <a href="#projects"><span data-lang="fr">Explorer mon travail</span><span data-lang="en" hidden>Explore my work</span><span class="scroll-arrow">↓</span></a>
+          <a href="#projects"
+            ><span data-lang="fr">Explorer mon travail</span><span data-lang="en" hidden>Explore my work</span
+            ><span class="scroll-arrow">↓</span></a
+          >
         </div>
       </section>
 
+      <!-- Bandeau animé des technologies -->
       <div class="ticker" aria-hidden="true">
-        <div><span>TYPE­SCRIPT</span><i>✦</i><span>NODE.JS</span><i>✦</i><span>REACT</span><i>✦</i><span>REST API</span><i>✦</i><span>SQL</span><i>✦</i><span>TYPE­SCRIPT</span><i>✦</i><span>NODE.JS</span><i>✦</i><span>REACT</span><i>✦</i></div>
+        <div>
+          <span>TYPE­SCRIPT</span><i>✦</i><span>NODE.JS</span><i>✦</i><span>REACT</span><i>✦</i><span>REST API</span
+          ><i>✦</i><span>SQL</span><i>✦</i><span>TYPE­SCRIPT</span><i>✦</i><span>NODE.JS</span><i>✦</i><span>REACT</span
+          ><i>✦</i>
+        </div>
       </div>
 
+      <!-- Profil, principes de travail et valeur apportée -->
       <section class="about section" id="about" data-chapter="01">
-        <div class="gojo-domain" aria-hidden="true"><span class="domain-core"></span><span class="domain-stars"></span><span class="domain-rings"></span></div>
-        <div class="section-label" data-reveal><span>01</span><p data-lang="fr">À propos</p><p data-lang="en" hidden>About</p></div>
+        <div class="gojo-domain" aria-hidden="true">
+          <span class="domain-core"></span><span class="domain-stars"></span><span class="domain-rings"></span>
+        </div>
+        <div class="section-label" data-reveal>
+          <span>01</span>
+          <p data-lang="fr">À propos</p>
+          <p data-lang="en" hidden>About</p>
+        </div>
         <div class="anime-scene about-scene" data-reveal aria-hidden="true">
           <img src="./anime-gojo.png" alt="" />
           <div><small>GOJO / 01</small><strong>DOMAIN: IDEAS</strong><span>∞ Curiosité activée</span></div>
         </div>
         <div class="about-grid">
-          <h2 data-reveal><span data-lang="fr">Curieux par nature.<br />Rigoureux par choix.</span><span data-lang="en" hidden>Curious by nature.<br />Rigorous by choice.</span></h2>
+          <h2 data-reveal>
+            <span data-lang="fr">Curieux par nature.<br />Rigoureux par choix.</span
+            ><span data-lang="en" hidden>Curious by nature.<br />Rigorous by choice.</span>
+          </h2>
           <div class="about-copy" data-reveal>
-            <p><span data-lang="fr">Étudiant en génie logiciel à l’ÉTS, je construis des produits où l’architecture, la lisibilité et l’expérience utilisateur avancent ensemble.</span><span data-lang="en" hidden>As a software engineering student at ÉTS, I build products where architecture, readability and user experience move forward together.</span></p>
-            <p><span data-lang="fr">Mon objectif : rejoindre une équipe ambitieuse, apprendre vite et livrer du code qui reste solide après la démo.</span><span data-lang="en" hidden>My goal: join an ambitious team, learn fast and ship code that stays solid long after the demo.</span></p>
+            <p>
+              <span data-lang="fr"
+                >Étudiant en génie logiciel à l’ÉTS, je construis des produits où l’architecture, la lisibilité et
+                l’expérience utilisateur avancent ensemble.</span
+              ><span data-lang="en" hidden
+                >As a software engineering student at ÉTS, I build products where architecture, readability and user
+                experience move forward together.</span
+              >
+            </p>
+            <p>
+              <span data-lang="fr"
+                >Mon objectif : rejoindre une équipe ambitieuse, apprendre vite et livrer du code qui reste solide après
+                la démo.</span
+              ><span data-lang="en" hidden
+                >My goal: join an ambitious team, learn fast and ship code that stays solid long after the demo.</span
+              >
+            </p>
             <div class="about-actions">
-              <a href="./cv-edwar-nazzarian.pdf" target="_blank" rel="noopener noreferrer" data-lang="fr">Voir mon CV ↗</a>
-              <a href="./Edwar_CV-EN.pdf" target="_blank" rel="noopener noreferrer" data-lang="en" hidden>View my resume ↗</a>
+              <a href="./cv-edwar-nazzarian.pdf" target="_blank" rel="noopener noreferrer" data-lang="fr"
+                >Voir mon CV ↗</a
+              >
+              <a href="./Edwar_CV-EN.pdf" target="_blank" rel="noopener noreferrer" data-lang="en" hidden
+                >View my resume ↗</a
+              >
               <span>FR / EN</span>
             </div>
           </div>
         </div>
         <div class="principles" data-reveal>
-          <article><b>01</b><h3><span data-lang="fr">Clarté</span><span data-lang="en" hidden>Clarity</span></h3><p><span data-lang="fr">Des décisions compréhensibles et du code lisible.</span><span data-lang="en" hidden>Decisions people understand and code people can read.</span></p></article>
-          <article><b>02</b><h3><span data-lang="fr">Fiabilité</span><span data-lang="en" hidden>Reliability</span></h3><p><span data-lang="fr">Tester l’essentiel et prévoir les erreurs.</span><span data-lang="en" hidden>Test what matters and plan for failure.</span></p></article>
-          <article><b>03</b><h3><span data-lang="fr">Progression</span><span data-lang="en" hidden>Growth</span></h3><p><span data-lang="fr">Apprendre, mesurer, améliorer, recommencer.</span><span data-lang="en" hidden>Learn, measure, improve, repeat.</span></p></article>
+          <article>
+            <b>01</b>
+            <h3><span data-lang="fr">Clarté</span><span data-lang="en" hidden>Clarity</span></h3>
+            <p>
+              <span data-lang="fr">Des décisions compréhensibles et du code lisible.</span
+              ><span data-lang="en" hidden>Decisions people understand and code people can read.</span>
+            </p>
+          </article>
+          <article>
+            <b>02</b>
+            <h3><span data-lang="fr">Fiabilité</span><span data-lang="en" hidden>Reliability</span></h3>
+            <p>
+              <span data-lang="fr">Tester l’essentiel et prévoir les erreurs.</span
+              ><span data-lang="en" hidden>Test what matters and plan for failure.</span>
+            </p>
+          </article>
+          <article>
+            <b>03</b>
+            <h3><span data-lang="fr">Progression</span><span data-lang="en" hidden>Growth</span></h3>
+            <p>
+              <span data-lang="fr">Apprendre, mesurer, améliorer, recommencer.</span
+              ><span data-lang="en" hidden>Learn, measure, improve, repeat.</span>
+            </p>
+          </article>
         </div>
         <div class="value-strip" data-reveal>
-          <div class="value-strip-heading"><span>EDWAR / VALUE</span><h3><span data-lang="fr">Ce que j’apporte</span><span data-lang="en" hidden>What I bring</span></h3></div>
-          <article class="value-card"><b>01 / BACKEND</b><p><span data-lang="fr">Des API structurées, des données cohérentes et une logique facile à maintenir.</span><span data-lang="en" hidden>Structured APIs, consistent data and logic that stays maintainable.</span></p></article>
-          <article class="value-card"><b>02 / PRODUCT</b><p><span data-lang="fr">Des interfaces responsive pensées pour rester simples sur chaque écran.</span><span data-lang="en" hidden>Responsive interfaces designed to remain simple on every screen.</span></p></article>
-          <article class="value-card"><b>03 / TEAM</b><p><span data-lang="fr">Une communication claire, de la curiosité et le réflexe de tester avant de livrer.</span><span data-lang="en" hidden>Clear communication, curiosity and the habit of testing before shipping.</span></p></article>
+          <div class="value-strip-heading">
+            <span>EDWAR / VALUE</span>
+            <h3><span data-lang="fr">Ce que j’apporte</span><span data-lang="en" hidden>What I bring</span></h3>
+          </div>
+          <article class="value-card">
+            <b>01 / BACKEND</b>
+            <p>
+              <span data-lang="fr">Des API structurées, des données cohérentes et une logique facile à maintenir.</span
+              ><span data-lang="en" hidden>Structured APIs, consistent data and logic that stays maintainable.</span>
+            </p>
+          </article>
+          <article class="value-card">
+            <b>02 / PRODUCT</b>
+            <p>
+              <span data-lang="fr">Des interfaces responsive pensées pour rester simples sur chaque écran.</span
+              ><span data-lang="en" hidden>Responsive interfaces designed to remain simple on every screen.</span>
+            </p>
+          </article>
+          <article class="value-card">
+            <b>03 / TEAM</b>
+            <p>
+              <span data-lang="fr"
+                >Une communication claire, de la curiosité et le réflexe de tester avant de livrer.</span
+              ><span data-lang="en" hidden
+                >Clear communication, curiosity and the habit of testing before shipping.</span
+              >
+            </p>
+          </article>
         </div>
       </section>
 
+      <!-- Projets et galeries d’images consultables en grand -->
       <section class="projects section" id="projects" data-chapter="02">
-        <div class="section-label light" data-reveal><span>02</span><p data-lang="fr">Projets sélectionnés</p><p data-lang="en" hidden>Selected work</p></div>
+        <div class="section-label light" data-reveal>
+          <span>02</span>
+          <p data-lang="fr">Projets sélectionnés</p>
+          <p data-lang="en" hidden>Selected work</p>
+        </div>
         <div class="projects-heading" data-reveal>
-          <h2><span data-lang="fr">Du concept au<br />produit qui fonctionne.</span><span data-lang="en" hidden>From concept to<br />working product.</span></h2>
-          <p><span data-lang="fr">Deux projets qui montrent ma manière de structurer, développer, tester et faire évoluer un produit logiciel.</span><span data-lang="en" hidden>Two projects showing how I structure, build, test and evolve software products.</span></p>
+          <h2>
+            <span data-lang="fr">Du concept au<br />produit qui fonctionne.</span
+            ><span data-lang="en" hidden>From concept to<br />working product.</span>
+          </h2>
+          <p>
+            <span data-lang="fr"
+              >Deux projets qui montrent ma manière de structurer, développer, tester et faire évoluer un produit
+              logiciel.</span
+            ><span data-lang="en" hidden
+              >Two projects showing how I structure, build, test and evolve software products.</span
+            >
+          </p>
         </div>
         <div class="project-guides" data-reveal aria-hidden="true">
-          <article><img src="./anime-tanjiro.png" alt="" /><div><small>TANJIRO / CRAFT</small><strong>Construire avec patience</strong></div></article>
-          <article><img src="./anime-edward.png" alt="" /><div><small>EDWARD / SYSTEM</small><strong>Architecture équivalente</strong></div></article>
+          <article>
+            <img src="./anime-tanjiro.png" alt="" />
+            <div><small>TANJIRO / CRAFT</small><strong>Construire avec patience</strong></div>
+          </article>
+          <article>
+            <img src="./anime-edward.png" alt="" />
+            <div><small>EDWARD / SYSTEM</small><strong>Architecture équivalente</strong></div>
+          </article>
         </div>
 
         <article class="project-card project-sga" data-reveal>
           <div class="project-number">01 / 02</div>
           <div class="project-copy">
-            <p class="project-type"><span data-lang="fr">Système d’apprentissage · 2026</span><span data-lang="en" hidden>Learning system · 2026</span></p>
+            <p class="project-type">
+              <span data-lang="fr">Système d’apprentissage · 2026</span
+              ><span data-lang="en" hidden>Learning system · 2026</span>
+            </p>
             <h3>SGA</h3>
-            <p><span data-lang="fr">Un système orienté objet pour gérer cours, questionnaires et questions, conçu pour rester rapide et maintenable.</span><span data-lang="en" hidden>An object-oriented system for courses, quizzes and questions, built to stay fast and maintainable.</span></p>
-            <ul><li>Cache mémoire avec TTL</li><li>Tests Jest &amp; journalisation</li><li>Architecture UML / GRASP</li></ul>
-            <div class="project-impact"><small>IMPACT / ENGINEERING</small><strong><span data-lang="fr">Une base prête à évoluer</span><span data-lang="en" hidden>A foundation built to evolve</span></strong><p><span data-lang="fr">Responsabilités séparées, cache contrôlé et erreurs traçables.</span><span data-lang="en" hidden>Separated responsibilities, controlled caching and traceable errors.</span></p></div>
+            <p>
+              <span data-lang="fr"
+                >Un système orienté objet pour gérer cours, questionnaires et questions, conçu pour rester rapide et
+                maintenable.</span
+              ><span data-lang="en" hidden
+                >An object-oriented system for courses, quizzes and questions, built to stay fast and
+                maintainable.</span
+              >
+            </p>
+            <ul>
+              <li>Cache mémoire avec TTL</li>
+              <li>Tests Jest &amp; journalisation</li>
+              <li>Architecture UML / GRASP</li>
+            </ul>
+            <div class="project-impact">
+              <small>IMPACT / ENGINEERING</small
+              ><strong
+                ><span data-lang="fr">Une base prête à évoluer</span
+                ><span data-lang="en" hidden>A foundation built to evolve</span></strong
+              >
+              <p>
+                <span data-lang="fr">Responsabilités séparées, cache contrôlé et erreurs traçables.</span
+                ><span data-lang="en" hidden>Separated responsibilities, controlled caching and traceable errors.</span>
+              </p>
+            </div>
             <div class="stack"><span>TypeScript</span><span>Node.js</span><span>Jest</span><span>UML</span></div>
           </div>
-          <button class="project-window" type="button" data-lightbox-src="./project-sga-courses.png" data-caption-fr="Système de gestion de l’apprentissage" data-caption-en="Learning management system">
+          <button
+            class="project-window"
+            type="button"
+            data-lightbox-src="./project-sga-courses.png"
+            data-caption-fr="Système de gestion de l’apprentissage"
+            data-caption-en="Learning management system"
+          >
             <span class="window-top"><i></i><i></i><i></i><b>SGA / LOCALHOST</b></span>
             <img src="./project-sga-courses.png" alt="Interface du système SGA" loading="lazy" />
-            <span class="view-project"><span data-lang="fr">Voir en grand</span><span data-lang="en" hidden>View large</span> ↗</span>
+            <span class="view-project"
+              ><span data-lang="fr">Voir en grand</span><span data-lang="en" hidden>View large</span> ↗</span
+            >
           </button>
         </article>
 
         <div class="project-gallery" data-reveal>
-          <div class="gallery-heading"><span>SGA / 03</span><h3><span data-lang="fr">Preuves de conception</span><span data-lang="en" hidden>Engineering evidence</span></h3></div>
+          <div class="gallery-heading">
+            <span>SGA / 03</span>
+            <h3>
+              <span data-lang="fr">Preuves de conception</span><span data-lang="en" hidden>Engineering evidence</span>
+            </h3>
+          </div>
           <div class="gallery-grid">
-            <button type="button" data-lightbox-src="./project-sga-performance.png" data-caption-fr="Performance du cache mémoire" data-caption-en="In-memory cache performance"><img src="./project-sga-performance.png" alt="Résultats du test de performance du cache" loading="lazy" /><span>Cache &amp; performance ↗</span></button>
-            <button type="button" data-lightbox-src="./project-sga-uml.png" data-caption-fr="Architecture UML du système" data-caption-en="System UML architecture"><img src="./project-sga-uml.png" alt="Diagramme UML du projet SGA" loading="lazy" /><span>UML &amp; architecture ↗</span></button>
-            <button type="button" data-lightbox-src="./project-sga-logging.png" data-caption-fr="Journalisation persistante" data-caption-en="Persistent error logging"><img src="./project-sga-logging.png" alt="Journal d’erreurs du projet SGA" loading="lazy" /><span>Logging &amp; errors ↗</span></button>
+            <button
+              type="button"
+              data-lightbox-src="./project-sga-performance.png"
+              data-caption-fr="Performance du cache mémoire"
+              data-caption-en="In-memory cache performance"
+            >
+              <img
+                src="./project-sga-performance.png"
+                alt="Résultats du test de performance du cache"
+                loading="lazy"
+              /><span>Cache &amp; performance ↗</span>
+            </button>
+            <button
+              type="button"
+              data-lightbox-src="./project-sga-uml.png"
+              data-caption-fr="Architecture UML du système"
+              data-caption-en="System UML architecture"
+            >
+              <img src="./project-sga-uml.png" alt="Diagramme UML du projet SGA" loading="lazy" /><span
+                >UML &amp; architecture ↗</span
+              >
+            </button>
+            <button
+              type="button"
+              data-lightbox-src="./project-sga-logging.png"
+              data-caption-fr="Journalisation persistante"
+              data-caption-en="Persistent error logging"
+            >
+              <img src="./project-sga-logging.png" alt="Journal d’erreurs du projet SGA" loading="lazy" /><span
+                >Logging &amp; errors ↗</span
+              >
+            </button>
           </div>
         </div>
 
         <article class="project-card project-boozy" data-reveal>
           <div class="project-number">02 / 02</div>
           <div class="project-copy">
-            <p class="project-type"><span data-lang="fr">Plateforme de livraison · 2025</span><span data-lang="en" hidden>Delivery platform · 2025</span></p>
+            <p class="project-type">
+              <span data-lang="fr">Plateforme de livraison · 2025</span
+              ><span data-lang="en" hidden>Delivery platform · 2025</span>
+            </p>
             <h3>Boozy</h3>
-            <p><span data-lang="fr">Un écosystème Full-Stack réunissant apps Android, portail administratif et services backend.</span><span data-lang="en" hidden>A Full-Stack ecosystem combining Android apps, an admin portal and backend services.</span></p>
-            <ul><li>API REST avec Express.js</li><li>Persistance MySQL</li><li>Workflow Agile en équipe</li></ul>
-            <div class="project-impact"><small>IMPACT / DELIVERY</small><strong><span data-lang="fr">Un produit complet, de l’API au mobile</span><span data-lang="en" hidden>A complete product, from API to mobile</span></strong><p><span data-lang="fr">Applications Android, portail administratif et backend réunis dans un même flux.</span><span data-lang="en" hidden>Android apps, an admin portal and backend services united in one flow.</span></p></div>
+            <p>
+              <span data-lang="fr"
+                >Un écosystème Full-Stack réunissant apps Android, portail administratif et services backend.</span
+              ><span data-lang="en" hidden
+                >A Full-Stack ecosystem combining Android apps, an admin portal and backend services.</span
+              >
+            </p>
+            <ul>
+              <li>API REST avec Express.js</li>
+              <li>Persistance MySQL</li>
+              <li>Workflow Agile en équipe</li>
+            </ul>
+            <div class="project-impact">
+              <small>IMPACT / DELIVERY</small
+              ><strong
+                ><span data-lang="fr">Un produit complet, de l’API au mobile</span
+                ><span data-lang="en" hidden>A complete product, from API to mobile</span></strong
+              >
+              <p>
+                <span data-lang="fr"
+                  >Applications Android, portail administratif et backend réunis dans un même flux.</span
+                ><span data-lang="en" hidden
+                  >Android apps, an admin portal and backend services united in one flow.</span
+                >
+              </p>
+            </div>
             <div class="stack"><span>JavaScript</span><span>Express</span><span>MySQL</span><span>Android</span></div>
-            <a class="project-link" href="https://github.com/killua11111010100/TCH099-Boozy" target="_blank" rel="noopener noreferrer"><span data-lang="fr">Voir sur GitHub</span><span data-lang="en" hidden>View on GitHub</span> ↗</a>
+            <a
+              class="project-link"
+              href="https://github.com/killua11111010100/TCH099-Boozy"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><span data-lang="fr">Voir sur GitHub</span><span data-lang="en" hidden>View on GitHub</span> ↗</a
+            >
           </div>
-          <button class="project-window" type="button" data-lightbox-src="./project-boozy-mobile-clean.png" data-caption-fr="Maquettes mobiles Boozy" data-caption-en="Boozy mobile mockups">
+          <button
+            class="project-window"
+            type="button"
+            data-lightbox-src="./project-boozy-mobile-clean.png"
+            data-caption-fr="Maquettes mobiles Boozy"
+            data-caption-en="Boozy mobile mockups"
+          >
             <span class="window-top"><i></i><i></i><i></i><b>BOOZY / MOBILE</b></span>
-            <img src="./project-boozy-mobile-clean.png" alt="Maquettes mobiles Boozy sans l’interface du navigateur" loading="lazy" />
-            <span class="view-project"><span data-lang="fr">Voir en grand</span><span data-lang="en" hidden>View large</span> ↗</span>
+            <img
+              src="./project-boozy-mobile-clean.png"
+              alt="Maquettes mobiles Boozy sans l’interface du navigateur"
+              loading="lazy"
+            />
+            <span class="view-project"
+              ><span data-lang="fr">Voir en grand</span><span data-lang="en" hidden>View large</span> ↗</span
+            >
           </button>
         </article>
 
         <div class="project-gallery boozy-gallery" data-reveal>
-          <div class="gallery-heading"><span>BOOZY / 08</span><h3><span data-lang="fr">Aperçu complet de la plateforme</span><span data-lang="en" hidden>Complete platform overview</span></h3></div>
+          <div class="gallery-heading">
+            <span>BOOZY / 08</span>
+            <h3>
+              <span data-lang="fr">Aperçu complet de la plateforme</span
+              ><span data-lang="en" hidden>Complete platform overview</span>
+            </h3>
+          </div>
           <div class="gallery-grid gallery-grid-wide">
-            <button type="button" data-lightbox-src="./boozy-mobile-profiles.png" data-caption-fr="Profils client et livreur" data-caption-en="Customer and courier profiles"><img src="./boozy-mobile-profiles.png" alt="Profils client et livreur Boozy" loading="lazy" /><span>Profils ↗</span></button>
-            <button type="button" data-lightbox-src="./boozy-mobile-tracking.png" data-caption-fr="Suivi mobile d’une commande" data-caption-en="Mobile order tracking"><img src="./boozy-mobile-tracking.png" alt="Suivi mobile d’une commande Boozy" loading="lazy" /><span>Suivi ↗</span></button>
-            <button type="button" data-lightbox-src="./boozy-mobile-navigation.png" data-caption-fr="Navigation de livraison" data-caption-en="Delivery navigation"><img src="./boozy-mobile-navigation.png" alt="Navigation mobile Boozy" loading="lazy" /><span>Navigation ↗</span></button>
-            <button type="button" data-lightbox-src="./boozy-mobile-maps.png" data-caption-fr="Itinéraire dans Google Maps" data-caption-en="Google Maps route"><img src="./boozy-mobile-maps.png" alt="Itinéraire Google Maps Boozy" loading="lazy" /><span>Maps ↗</span></button>
-            <button type="button" data-lightbox-src="./boozy-admin-dashboard.png" data-caption-fr="Tableau de bord administrateur" data-caption-en="Administration dashboard"><img src="./boozy-admin-dashboard.png" alt="Tableau de bord administrateur Boozy" loading="lazy" /><span>Dashboard ↗</span></button>
-            <button type="button" data-lightbox-src="./boozy-admin-products.png" data-caption-fr="Gestion des produits" data-caption-en="Product management"><img src="./boozy-admin-products.png" alt="Gestion des produits Boozy" loading="lazy" /><span>Produits ↗</span></button>
-            <button type="button" data-lightbox-src="./boozy-admin-users.png" data-caption-fr="Gestion des utilisateurs" data-caption-en="User management"><img src="./boozy-admin-users.png" alt="Gestion des utilisateurs Boozy" loading="lazy" /><span>Utilisateurs ↗</span></button>
-            <button type="button" data-lightbox-src="./boozy-admin-orders.png" data-caption-fr="Gestion des commandes" data-caption-en="Order management"><img src="./boozy-admin-orders.png" alt="Gestion des commandes Boozy" loading="lazy" /><span>Commandes ↗</span></button>
+            <button
+              type="button"
+              data-lightbox-src="./boozy-mobile-profiles.png"
+              data-caption-fr="Profils client et livreur"
+              data-caption-en="Customer and courier profiles"
+            >
+              <img src="./boozy-mobile-profiles.png" alt="Profils client et livreur Boozy" loading="lazy" /><span
+                >Profils ↗</span
+              >
+            </button>
+            <button
+              type="button"
+              data-lightbox-src="./boozy-mobile-tracking.png"
+              data-caption-fr="Suivi mobile d’une commande"
+              data-caption-en="Mobile order tracking"
+            >
+              <img src="./boozy-mobile-tracking.png" alt="Suivi mobile d’une commande Boozy" loading="lazy" /><span
+                >Suivi ↗</span
+              >
+            </button>
+            <button
+              type="button"
+              data-lightbox-src="./boozy-mobile-navigation.png"
+              data-caption-fr="Navigation de livraison"
+              data-caption-en="Delivery navigation"
+            >
+              <img src="./boozy-mobile-navigation.png" alt="Navigation mobile Boozy" loading="lazy" /><span
+                >Navigation ↗</span
+              >
+            </button>
+            <button
+              type="button"
+              data-lightbox-src="./boozy-mobile-maps.png"
+              data-caption-fr="Itinéraire dans Google Maps"
+              data-caption-en="Google Maps route"
+            >
+              <img src="./boozy-mobile-maps.png" alt="Itinéraire Google Maps Boozy" loading="lazy" /><span
+                >Maps ↗</span
+              >
+            </button>
+            <button
+              type="button"
+              data-lightbox-src="./boozy-admin-dashboard.png"
+              data-caption-fr="Tableau de bord administrateur"
+              data-caption-en="Administration dashboard"
+            >
+              <img src="./boozy-admin-dashboard.png" alt="Tableau de bord administrateur Boozy" loading="lazy" /><span
+                >Dashboard ↗</span
+              >
+            </button>
+            <button
+              type="button"
+              data-lightbox-src="./boozy-admin-products.png"
+              data-caption-fr="Gestion des produits"
+              data-caption-en="Product management"
+            >
+              <img src="./boozy-admin-products.png" alt="Gestion des produits Boozy" loading="lazy" /><span
+                >Produits ↗</span
+              >
+            </button>
+            <button
+              type="button"
+              data-lightbox-src="./boozy-admin-users.png"
+              data-caption-fr="Gestion des utilisateurs"
+              data-caption-en="User management"
+            >
+              <img src="./boozy-admin-users.png" alt="Gestion des utilisateurs Boozy" loading="lazy" /><span
+                >Utilisateurs ↗</span
+              >
+            </button>
+            <button
+              type="button"
+              data-lightbox-src="./boozy-admin-orders.png"
+              data-caption-fr="Gestion des commandes"
+              data-caption-en="Order management"
+            >
+              <img src="./boozy-admin-orders.png" alt="Gestion des commandes Boozy" loading="lazy" /><span
+                >Commandes ↗</span
+              >
+            </button>
           </div>
         </div>
       </section>
 
+      <!-- Compétences techniques -->
       <section class="skills section" id="skills" data-chapter="03">
-        <div class="skills-atmosphere" aria-hidden="true"><span>{ }</span><span>&lt;/&gt;</span><span>API</span><span>0101</span><span>SQL</span></div>
-        <div class="section-label" data-reveal><span>03</span><p data-lang="fr">Boîte à outils</p><p data-lang="en" hidden>Toolkit</p></div>
+        <div class="skills-atmosphere" aria-hidden="true">
+          <span>{ }</span><span>&lt;/&gt;</span><span>API</span><span>0101</span><span>SQL</span>
+        </div>
+        <div class="section-label" data-reveal>
+          <span>03</span>
+          <p data-lang="fr">Boîte à outils</p>
+          <p data-lang="en" hidden>Toolkit</p>
+        </div>
         <div class="skills-grid">
-          <div class="skills-title" data-reveal><div class="chapter-chip"><i></i> STACK / SYSTEM ONLINE</div><h2><span data-lang="fr">Les bons outils.<br />Pour le bon problème.</span><span data-lang="en" hidden>The right tools.<br />For the right problem.</span></h2><p>ENGINEERING WITH INTENT</p></div>
+          <div class="skills-title" data-reveal>
+            <div class="chapter-chip"><i></i> STACK / SYSTEM ONLINE</div>
+            <h2>
+              <span data-lang="fr">Les bons outils.<br />Pour le bon problème.</span
+              ><span data-lang="en" hidden>The right tools.<br />For the right problem.</span>
+            </h2>
+            <p>ENGINEERING WITH INTENT</p>
+          </div>
           <div class="skill-list" data-reveal>
-            <article><span>01</span><h3><span data-lang="fr">Langages</span><span data-lang="en" hidden>Languages</span></h3><p>TypeScript · JavaScript · Java · C · SQL</p></article>
-            <article><span>02</span><h3>Backend &amp; API</h3><p>Node.js · Express.js · REST · JWT</p></article>
-            <article><span>03</span><h3>Frontend</h3><p>React · HTML · CSS · Responsive UI</p></article>
-            <article><span>04</span><h3><span data-lang="fr">Données</span><span data-lang="en" hidden>Data</span></h3><p>PostgreSQL · MySQL · MongoDB · Power BI</p></article>
-            <article><span>05</span><h3><span data-lang="fr">Qualité</span><span data-lang="en" hidden>Quality</span></h3><p>Jest · UML · GRASP · Git · Jira</p></article>
+            <article>
+              <span>01</span>
+              <h3><span data-lang="fr">Langages</span><span data-lang="en" hidden>Languages</span></h3>
+              <p>TypeScript · JavaScript · Java · C · SQL</p>
+            </article>
+            <article>
+              <span>02</span>
+              <h3>Backend &amp; API</h3>
+              <p>Node.js · Express.js · REST · JWT</p>
+            </article>
+            <article>
+              <span>03</span>
+              <h3>Frontend</h3>
+              <p>React · HTML · CSS · Responsive UI</p>
+            </article>
+            <article>
+              <span>04</span>
+              <h3><span data-lang="fr">Données</span><span data-lang="en" hidden>Data</span></h3>
+              <p>PostgreSQL · MySQL · MongoDB · Power BI</p>
+            </article>
+            <article>
+              <span>05</span>
+              <h3><span data-lang="fr">Qualité</span><span data-lang="en" hidden>Quality</span></h3>
+              <p>Jest · UML · GRASP · Git · Jira</p>
+            </article>
           </div>
         </div>
       </section>
 
+      <!-- Formation et expérience -->
       <section class="journey section" id="journey" data-chapter="04">
         <div class="journey-anime-bg" aria-hidden="true">
-          <span class="journey-moon"></span><span class="journey-speed-lines"></span>
-          <span class="journey-chair"></span><span class="journey-coder"><i></i><b></b></span>
-          <span class="journey-desk"></span><span class="journey-laptop"><i></i></span>
-          <span class="journey-code-card code-card-one">&lt;/&gt;</span><span class="journey-code-card code-card-two">{ }</span><span class="journey-code-card code-card-three">01</span>
+          <span class="journey-moon"></span><span class="journey-speed-lines"></span> <span class="journey-chair"></span
+          ><span class="journey-coder"><i></i><b></b></span> <span class="journey-desk"></span
+          ><span class="journey-laptop"><i></i></span> <span class="journey-code-card code-card-one">&lt;/&gt;</span
+          ><span class="journey-code-card code-card-two">{ }</span
+          ><span class="journey-code-card code-card-three">01</span>
         </div>
-        <div class="section-label" data-reveal><span>04</span><p data-lang="fr">Parcours</p><p data-lang="en" hidden>Journey</p></div>
+        <div class="section-label" data-reveal>
+          <span>04</span>
+          <p data-lang="fr">Parcours</p>
+          <p data-lang="en" hidden>Journey</p>
+        </div>
         <div class="journey-grid">
-          <div class="journey-title" data-reveal><div class="chapter-chip"><i></i> LEARNING ARC / ACTIVE</div><h2><span data-lang="fr">Toujours en<br />mouvement.</span><span data-lang="en" hidden>Always moving<br />forward.</span></h2></div>
+          <div class="journey-title" data-reveal>
+            <div class="chapter-chip"><i></i> LEARNING ARC / ACTIVE</div>
+            <h2>
+              <span data-lang="fr">Toujours en<br />mouvement.</span
+              ><span data-lang="en" hidden>Always moving<br />forward.</span>
+            </h2>
+          </div>
           <div class="timeline" data-reveal>
-            <article><time>2025 — <span data-lang="fr">Présent</span><span data-lang="en" hidden>Present</span></time><h3><span data-lang="fr">Baccalauréat en génie logiciel</span><span data-lang="en" hidden>Bachelor’s in Software Engineering</span></h3><p>ÉTS · Montréal</p></article>
-            <article><time>2024 — 2025</time><h3><span data-lang="fr">Cheminement universitaire en technologie</span><span data-lang="en" hidden>University Pathway in Technology</span></h3><p>ÉTS · Montréal</p></article>
-            <article><time>2023 — <span data-lang="fr">Présent</span><span data-lang="en" hidden>Present</span></time><h3><span data-lang="fr">Préposé sénior au service à la clientèle</span><span data-lang="en" hidden>Senior customer service clerk</span></h3><p>Couche-Tard</p></article>
+            <article>
+              <time>2025 — <span data-lang="fr">Présent</span><span data-lang="en" hidden>Present</span></time>
+              <h3>
+                <span data-lang="fr">Baccalauréat en génie logiciel</span
+                ><span data-lang="en" hidden>Bachelor’s in Software Engineering</span>
+              </h3>
+              <p>ÉTS · Montréal</p>
+            </article>
+            <article>
+              <time>2024 — 2025</time>
+              <h3>
+                <span data-lang="fr">Cheminement universitaire en technologie</span
+                ><span data-lang="en" hidden>University Pathway in Technology</span>
+              </h3>
+              <p>ÉTS · Montréal</p>
+            </article>
+            <article>
+              <time>2023 — <span data-lang="fr">Présent</span><span data-lang="en" hidden>Present</span></time>
+              <h3>
+                <span data-lang="fr">Préposé sénior au service à la clientèle</span
+                ><span data-lang="en" hidden>Senior customer service clerk</span>
+              </h3>
+              <p>Couche-Tard</p>
+            </article>
           </div>
         </div>
       </section>
 
+      <!-- Coordonnées et liens professionnels -->
       <section class="contact section" id="contact" data-chapter="05">
         <div class="contact-sun" aria-hidden="true"></div>
         <div class="contact-copy-scene">
           <p class="contact-index">05 — CONTACT</p>
-          <h2 data-reveal><span data-lang="fr">Créons quelque chose<br />qui mérite d’exister.</span><span data-lang="en" hidden>Let’s build something<br />worth remembering.</span></h2>
-          <p class="contact-note" data-reveal><span data-lang="fr">Une mission, un stage ou simplement une bonne idée ? Mon grimoire est ouvert.</span><span data-lang="en" hidden>A mission, an internship or simply a great idea? My grimoire is open.</span></p>
+          <h2 data-reveal>
+            <span data-lang="fr">Créons quelque chose<br />qui mérite d’exister.</span
+            ><span data-lang="en" hidden>Let’s build something<br />worth remembering.</span>
+          </h2>
+          <p class="contact-note" data-reveal>
+            <span data-lang="fr">Une mission, un stage ou simplement une bonne idée ? Mon grimoire est ouvert.</span
+            ><span data-lang="en" hidden>A mission, an internship or simply a great idea? My grimoire is open.</span>
+          </p>
           <div class="contact-actions" data-reveal>
-            <a class="big-mail" href="mailto:edwarnazarian75@gmail.com"><span data-lang="fr">Démarrer une conversation</span><span data-lang="en" hidden>Start a conversation</span><b>↗</b></a>
-            <button class="copy-email" id="copyEmail" type="button" data-email="edwarnazarian75@gmail.com" data-copied-fr="Courriel copié !" data-copied-en="Email copied!" aria-live="polite"><span aria-hidden="true">⧉</span><span data-lang="fr">Copier mon courriel</span><span data-lang="en" hidden>Copy my email</span></button>
+            <a class="big-mail" href="mailto:edwarnazarian75@gmail.com"
+              ><span data-lang="fr">Démarrer une conversation</span
+              ><span data-lang="en" hidden>Start a conversation</span><b>↗</b></a
+            >
+            <button
+              class="copy-email"
+              id="copyEmail"
+              type="button"
+              data-email="edwarnazarian75@gmail.com"
+              data-copied-fr="Courriel copié !"
+              data-copied-en="Email copied!"
+              aria-live="polite"
+            >
+              <span aria-hidden="true">⧉</span><span data-lang="fr">Copier mon courriel</span
+              ><span data-lang="en" hidden>Copy my email</span>
+            </button>
           </div>
         </div>
-        <button class="contact-character" type="button" data-reveal aria-label="Libérer l’aura de Black Asta"><span class="asta-aura" aria-hidden="true"></span><span class="magic-ring" aria-hidden="true"></span><img src="./anime-asta.png" alt="" aria-hidden="true" /><b>BLACK ASTA · READY</b></button>
+        <button class="contact-character" type="button" data-reveal aria-label="Libérer l’aura de Black Asta">
+          <span class="asta-aura" aria-hidden="true"></span><span class="magic-ring" aria-hidden="true"></span
+          ><img src="./anime-asta.png" alt="" aria-hidden="true" /><b>BLACK ASTA · READY</b>
+        </button>
         <div class="contact-links" data-reveal>
           <a href="mailto:edwarnazarian75@gmail.com">EDWARNAZARIAN75@GMAIL.COM ↗</a>
-          <a href="https://www.linkedin.com/in/edwar-nazzarian/" target="_blank" rel="noopener noreferrer">LINKEDIN ↗</a>
+          <a href="https://www.linkedin.com/in/edwar-nazzarian/" target="_blank" rel="noopener noreferrer"
+            >LINKEDIN ↗</a
+          >
           <a href="https://github.com/killua11111010100" target="_blank" rel="noopener noreferrer">GITHUB ↗</a>
           <span>LAVAL / MONTRÉAL · QC</span>
         </div>
       </section>
     </main>
 
+    <!-- Signature et bouton de retour en haut -->
     <footer class="site-footer">
       <div class="footer-name" aria-label="Edwar Nazzarian"><span>EDWAR</span><span>NAZZARIAN</span></div>
-      <div class="footer-bottom"><span>© 2026 EDWAR NAZZARIAN · LAVAL / MONTRÉAL</span><strong>BUILT WITH <i>✦</i> CURIOSITY</strong><button id="backToTop" type="button"><span data-lang="fr">RETOUR EN HAUT</span><span data-lang="en" hidden>BACK TO TOP</span> ↑</button></div>
+      <div class="footer-bottom">
+        <span>© 2026 EDWAR NAZZARIAN · LAVAL / MONTRÉAL</span><strong>BUILT WITH <i>✦</i> CURIOSITY</strong
+        ><button id="backToTop" type="button">
+          <span data-lang="fr">RETOUR EN HAUT</span><span data-lang="en" hidden>BACK TO TOP</span> ↑
+        </button>
+      </div>
     </footer>
 
     <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lightboxCaption" hidden>
       <div class="lightbox-panel">
-        <div class="lightbox-head"><strong id="lightboxCaption"></strong><button id="lightboxClose" type="button" aria-label="Fermer">×</button></div>
+        <div class="lightbox-head">
+          <strong id="lightboxCaption"></strong><button id="lightboxClose" type="button" aria-label="Fermer">×</button>
+        </div>
         <img id="lightboxImage" src="" alt="" />
       </div>
     </div>
